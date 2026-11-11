@@ -1,0 +1,11 @@
+{
+  "score": 0.0,
+  "error": "empty_docx_text",
+  "submission_sha256": "52e3c44102a32abff57282752a551dea6005b2b76f8be11a9802fef65648b635",
+  "questions_sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+  "evaluator_sha256": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "temperature_difference": "official0 not sent with high reasoning; recorded not equivalent",
+  "score_scale": "0..1"
+}

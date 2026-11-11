@@ -1,0 +1,33 @@
+{
+  "score": 0.974035,
+  "passed": true,
+  "reason": "passed",
+  "hard_gate": null,
+  "probe": {
+    "exists": true,
+    "readable": true,
+    "codec_name": "h264",
+    "container_ext": ".mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frame_count": 144,
+    "duration_sec": 4.8
+  },
+  "metrics": {
+    "detection_ratio": 1.0,
+    "width_amplitude_ratio": 0.8702952029520296,
+    "estimated_flap_cycles": 4.0,
+    "y_turning_points": 4,
+    "y_range_ratio": 0.26923611111111106,
+    "max_jump_ratio": 0.014441741951380956,
+    "source_shape_iou": 0.5161417894394866
+  },
+  "components": {
+    "timing": 1.0,
+    "detection": 1.0,
+    "wing_flap": 1.0,
+    "path": 1.0,
+    "source_shape": 0.7403544735987166
+  }
+}

@@ -1,0 +1,3 @@
+Created [output.mp4](/workspace/submission/output.mp4): 1080p H.264, 30 fps, 5 seconds, exactly four wing-flap cycles, and a smooth looping path.
+
+Verified encoding and framing. The After Effects requirement is unmet; Python, OpenCV, and FFmpeg were used as authorized.

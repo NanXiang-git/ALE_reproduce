@@ -1,0 +1,407 @@
+<!doctype html><meta charset="utf-8"><title>工具运行轨迹</title><style>body{max-width:1100px;margin:auto;font:16px/1.6 system-ui;padding:24px}pre{white-space:pre-wrap;overflow-wrap:anywhere}details{border-bottom:1px solid #ccc;padding:10px}</style><a href="index.html">返回结果</a><h1>butterfly_flap_animation</h1><p>只展示公开动作，不展示内部推理。看图调用及图像哈希见JSON。</p><a href="butterfly_flap_animation_trajectory.json">下载轨迹JSON</a><details><summary>1 · I’ll read the task and inspect the local inputs, then create the deliverables in `/workspace/submission` using the authorized Linux tools. I’ll clearly disclose</summary><pre>
+I’ll read the task and inspect the local inputs, then create the deliverables in `/workspace/submission` using the authorized Linux tools. I’ll clearly disclose that After Effects was not used.</pre></details><details><summary>2 · /usr/bin/bash -lc &#x27;cat /candidate/TASK.md&#x27;</summary><pre>/usr/bin/bash -lc &#x27;cat /candidate/TASK.md&#x27;
+Create a butterfly wing-flap animation in Adobe After Effects.
+
+Remote workspace:
+- Task folder: /candidate
+
+Software:
+- Launch Adobe After Effects using: /candidate/software/launch_after_effects.bat
+- The installed After Effects version may differ from the original submission; use the available AE version opened by this launcher.
+- After Effects is the intended tool, but if AE is not available in the environment, any other way to achieve the goal is welcome (the output MP4 is what gets evaluated).
+
+Visible inputs:
+- Source butterfly artwork: /candidate/input/butterfly.jpeg
+- Detailed task spec: /candidate/input/task_spec.md
+
+What to do:
+1. Import the butterfly image into After Effects.
+2. Split or mask the butterfly into a central body plus left and right wings.
+3. Set wing anchor points near the wing-body joints.
+4. Animate the wings with repeated Y-rotation or equivalent perspective deformation.
+5. Produce exactly 4 complete wing flap cycles: open -&gt; closed -&gt; open.
+6. Move the butterfly along a smooth curved 2.5D-style path through the frame with at least 2 Y-direction turning points.
+7. Keep the butterfly texture recognizably tied to the source image at fully open moments.
+8. Use a plain dark or black background so the butterfly motion remains clear.
+
+Export requirements:
+- Export one H.264 MP4.
+- Frame rate: 30 fps.
+- Duration: 4.0 to 5.5 seconds.
+- Save the final render exactly here: /workspace/submission/output.mp4
+
+Do not modify files under input/. Write only the final MP4 under output/.
+</pre></details><details><summary>3 · /usr/bin/bash -lc &#x27;ls -la /candidate &amp;&amp; ls -la /workspace&#x27;</summary><pre>/usr/bin/bash -lc &#x27;ls -la /candidate &amp;&amp; ls -la /workspace&#x27;
+total 4
+drwxrwxrwx  1 1000 1000  512 Nov 10 16:36 .
+drwxr-xr-x 10 1000 1000  260 Nov 10 16:59 ..
+-rwxrwxrwx  1 1000 1000 1553 Nov 10 16:18 TASK.md
+drwxrwxrwx  1 1000 1000  512 Nov 10 03:24 input
+drwxrwxrwx  1 1000 1000  512 Nov 10 03:24 software
+total 0
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:59 .
+drwxr-xr-x 10 1000 1000 260 Nov 10 16:59 ..
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:59 .cache
+-rwxrwxrwx  1 1000 1000 119 Nov 10 16:59 DEADLINE.json
+drwxrwxrwx  1 1000 1000 512 Nov 10 17:00 codex_home
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:59 home
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:59 scratch
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:59 submission
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:59 tmp
+</pre></details><details><summary>4 · /usr/bin/bash -lc &#x27;cat /candidate/input/task_spec.md &amp;&amp; ls -lh /candidate/input &amp;&amp; cat /workspace/DEADLINE.json&#x27;</summary><pre>/usr/bin/bash -lc &#x27;cat /candidate/input/task_spec.md &amp;&amp; ls -lh /candidate/input &amp;&amp; cat /workspace/DEADLINE.json&#x27;
+# Butterfly Flap Animation Task
+
+## Goal
+
+Create a seamless animation of the provided butterfly image flapping its wings while
+moving along a smooth curved path in a 2.5D-style composition.
+
+## Input Asset
+
+- `input/butterfly.jpeg`: the source butterfly artwork. Reuse this visual texture in the
+  final animation.
+
+## Required Animation
+
+1. Split or mask the butterfly into a central body and left/right wings.
+2. Set wing anchor points near the wing-body joints.
+3. Animate the wings with repeated Y-rotation or an equivalent perspective deformation.
+4. Produce exactly 4 complete wing flap cycles. One complete cycle is open -&gt; closed -&gt; open.
+5. Make the butterfly move along a smooth curved path through the frame.
+6. The trajectory should include at least 2 Y-axis turning points.
+7. Avoid abrupt jumps in position or velocity.
+8. Keep the butterfly texture recognizably identical to the source image, especially on open-wing frames.
+9. Use a plain dark or black background so the butterfly motion remains clear.
+
+## Export Requirements
+
+- Export one H.264 MP4.
+- Frame rate: 30 fps.
+- Duration: 4.0 to 5.5 seconds.
+- Output path: `output/output.mp4`.
+
+## Software
+
+Use Adobe After Effects from the task-local `software/` launcher. The installed AE
+version may differ from the submitter&#x27;s original version as long as the launcher opens
+a usable Adobe After Effects installation.
+total 124K
+-rwxrwxrwx 1 1000 1000 119K Nov 10 03:24 butterfly.jpeg
+-rwxrwxrwx 1 1000 1000 1.4K Nov 10 03:24 task_spec.md
+{&quot;start_unix&quot;: 1794329993.6350985, &quot;deadline_unix&quot;: 1794337193.6350985, &quot;wall_clock_seconds&quot;: 7200, &quot;mode&quot;: &quot;official&quot;}</pre></details><details><summary>5 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from PIL import Image
+im=Image.open(&#x27;/candidate/input/butterfly.jpeg&#x27;)
+print(im.size)
+im.thumbnail((1400,1400))
+im.save(&#x27;/wor</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from PIL import Image
+im=Image.open(&#x27;/candidate/input/butterfly.jpeg&#x27;)
+print(im.size)
+im.thumbnail((1400,1400))
+im.save(&#x27;/workspace/scratch/source.png&#x27;)
+PY&quot;
+(1000, 755)
+</pre></details><details><summary>6 · The source is an orange ornamental butterfly on white. I’ll isolate its wings, body, and antennae, then animate four full flaps over five seconds on a black bac</summary><pre>
+The source is an orange ornamental butterfly on white. I’ll isolate its wings, body, and antennae, then animate four full flaps over five seconds on a black background. The flight path will loop smoothly and include four vertical turning points.</pre></details><details><summary>7 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import cv2,numpy as np
+from PIL import Image
+im=np.array(Image.open(&#x27;/candidate/input/butterfly.jpeg&#x27;).convert(&#x27;RGB&#x27;))
+p=im[(</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import cv2,numpy as np
+from PIL import Image
+im=np.array(Image.open(&#x27;/candidate/input/butterfly.jpeg&#x27;).convert(&#x27;RGB&#x27;))
+p=im[(im[:,:,0]&gt;200)&amp;(im[:,:,1]&lt;180)&amp;(im[:,:,2]&lt;80)]
+c,n=np.unique(p,axis=0,return_counts=True)
+print(&#x27;Dominant colors:&#x27;,c[np.argsort(n)[-10:]].tolist())
+m=((im[:,:,0].astype(float)-im[:,:,2])&gt;60).astype(&#x27;uint8&#x27;)
+n,l,s,cent=cv2.connectedComponentsWithStats(m)
+for i in range(1,n):
+ if s[i,4]&gt;10: print(i,s[i].tolist(),cent[i].tolist())
+print(&#x27;ffmpeg&#x27;)
+PY
+ffmpeg -version&quot;
+Dominant colors: [[255, 102, 2], [254, 102, 1], [255, 103, 0], [255, 98, 0], [254, 103, 0], [255, 99, 0], [255, 100, 0], [255, 101, 0], [255, 101, 1], [255, 102, 0]]
+1 [1, 0, 458, 497, 70448] [180.48431467181467, 281.0740404269816]
+2 [542, 0, 458, 497, 70498] [819.5317313966353, 281.02038355698033]
+3 [332, 108, 161, 279, 2166] [385.80147737765463, 180.72714681440442]
+4 [507, 108, 161, 279, 2183] [612.9922125515346, 180.9619789280806]
+5 [239, 157, 208, 228, 3588] [297.89158305462655, 266.0261984392419]
+6 [554, 157, 208, 228, 3585] [701.9615062761507, 266.16931659693165]
+7 [215, 296, 212, 141, 4110] [323.8530413625304, 373.42530413625303]
+8 [574, 296, 212, 141, 4114] [676.1691784151677, 373.3220709771512]
+9 [490, 389, 21, 18, 281] [499.9537366548043, 398.4626334519573]
+10 [290, 405, 196, 350, 16056] [401.34348530144496, 551.6243771798704]
+11 [515, 405, 195, 350, 16055] [598.6525692930551, 551.5848645281843]
+12 [489, 409, 23, 197, 3198] [500.4631019387117, 497.8158223889931]
+ffmpeg
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+libavutil      58. 29.100 / 58. 29.100
+libavcodec     60. 31.102 / 60. 31.102
+libavformat    60. 16.100 / 60. 16.100
+libavdevice    60.  3.100 / 60.  3.100
+libavfilter     9. 12.100 /  9. 12.100
+libswscale      7.  5.100 /  7.  5.100
+libswresample   4. 12.100 /  4. 12.100
+libpostproc    57.  3.100 / 57.  3.100
+</pre></details><details><summary>8 · /usr/bin/bash -lc &#x27;ls -lh /workspace/scratch /workspace/submission&#x27;</summary><pre>/usr/bin/bash -lc &#x27;ls -lh /workspace/scratch /workspace/submission&#x27;
+/workspace/scratch:
+total 320K
+-rwxrwxrwx 1 1000 1000 6.0K Nov 10 17:03 render_butterfly.py
+-rwxrwxrwx 1 1000 1000 310K Nov 10 17:00 source.png
+
+/workspace/submission:
+total 0
+</pre></details><details><summary>9 · /usr/bin/bash -lc &#x27;ps -eo pid,etimes,pcpu,pmem,comm,args --sort=-pcpu&#x27;</summary><pre>/usr/bin/bash -lc &#x27;ps -eo pid,etimes,pcpu,pmem,comm,args --sort=-pcpu&#x27;
+    PID ELAPSED %CPU %MEM COMMAND         COMMAND
+    237      23 48.9  3.6 python3         /usr/bin/python3 /workspace/scratch/render_butterfly.py
+    265       7  4.8  4.2 ffmpeg          ffmpeg -y -hide_banner -loglevel warning -f rawvideo -pixel_format rgb24 -video_size 1920x1080 -framerate 30 -i pipe:0 -an -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -profile:v high -level 4.1 -movflags +faststart -color_primaries bt709 -color_trc bt709 -colorspace bt709 -vf scale=in_range=full:out_range=tv:out_color_matrix=bt709 -metadata title=Butterfly | Four Wing Flaps -metadata comment=Created from the supplied butterfly artwork with local Python and OpenCV; Adobe After Effects was unavailable and was not used. /workspace/submission/output.mp4
+      4     234  0.3  1.7 codex           /runtime/codex_dist/package/vendor/x86_64-unknown-linux-musl/bin/codex exec --ignore-user-config --ignore-rules --ephemeral --skip-git-repo-check --dangerously-bypass-approvals-and-sandbox --json --color never --cd /workspace --model gpt-6-astra -c model_reasoning_effort=&quot;high&quot; -c model_provider=&quot;isolated_gateway&quot; -c model_providers.isolated_gateway.name=&quot;Isolated host gateway&quot; -c model_providers.isolated_gateway.base_url=&quot;http://127.0.0.1:8765/v1&quot; -c model_providers.isolated_gateway.wire_api=&quot;responses&quot; -c model_providers.isolated_gateway.requires_openai_auth=false -c features.multi_agent=false -c web_search=&quot;disabled&quot; --output-last-message /workspace/final_message.txt You are solving a benchmark in an isolated offline Linux environment. Read /candidate/TASK.md and complete the task autonomously. Only official task inputs and local tools are available. No network retrieval, other runs, evaluator or reference answers are available. Use /workspace/scratch for temporary work and /workspace/submission for final outputs. Python3 with numpy, scipy, OpenCV, Pillow and python-docx, and FFmpeg are available. No score feedback or retries based on quality. Do not spawn subagents. Time limit 120 minutes. This replication explicitly authorizes using local scripts to produce the butterfly video instead of After Effects, because AE is not installed. The original task text remains unchanged as provenance. Clearly disclose that the AE software requirement is unmet. Word-processing launcher scripts are original Windows assets; use the installed python-docx workflow for DOCX on Linux.
+      2     234  0.0  0.2 python3         /usr/bin/python3 /runtime/inside.py official
+    143     219  0.0  0.2 codex-code-mode /runtime/codex_dist/package/vendor/x86_64-unknown-linux-musl/bin/codex-code-mode-host
+      1     235  0.0  0.0 bwrap           bwrap --unshare-all --unshare-user --die-with-parent --disable-userns --cap-drop ALL --clearenv --ro-bind /usr/bin /usr/bin --ro-bind /usr/lib /usr/lib --ro-bind /usr/share /usr/share --symlink usr/bin /bin --symlink usr/lib /lib --symlink usr/lib64 /lib64 --ro-bind-try /usr/lib64 /usr/lib64 --ro-bind /etc/fonts /etc/fonts --ro-bind /etc/ssl /etc/ssl --ro-bind /etc/alternatives /etc/alternatives --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --proc /proc --dev /dev --ro-bind /mnt/d/omniALE/ALE_astra_audit_20261111/environment/deps /runtime/deps --ro-bind /mnt/d/omniALE/ALE_astra_audit_20261111/environment/bin /runtime/bin --ro-bind /mnt/d/omniALE/runs_11_14_gpt61sol_high_50m/run_20261102_002748/environment/runtime/codex_dist /runtime/codex_dist --ro-bind /mnt/d/omniALE/runs_11_14_gpt61sol_high_50m/run_20261102_002748/environment/runtime/fonts /runtime/fonts --ro-bind /mnt/d/omniALE/runs_11_14_gpt61sol_high_50m/run_20261102_002748/environment/runtime/fonts.conf /runtime/fonts.conf --ro-bind /mnt/d/omniALE/ALE_astra_audit_20261111/environment/runtime/inside.py /runtime/inside.py --ro-bind /mnt/d/omniALE/ALE_astra_audit_20261111/environment/runtime/prompt.txt /runtime/prompt.txt --ro-bind /mnt/d/omniALE/ALE_astra_audit_20261111/candidate/butterfly_flap_animation /candidate --bind /mnt/d/omniALE/ALE_astra_audit_20261111/solver/butterfly_flap_animation /workspace --bind /mnt/d/omniALE/ALE_astra_audit_20261111/solver/butterfly_flap_animation/tmp /tmp --chdir /workspace --setenv PATH /runtime/bin:/runtime/codex_dist/package/vendor/x86_64-unknown-linux-musl/bin:/usr/bin:/bin --setenv HOME /workspace/home --setenv CODEX_HOME /workspace/codex_home --setenv LANG C.UTF-8 --setenv TMPDIR /workspace/tmp --setenv TMP /workspace/tmp --setenv TEMP /workspace/tmp --setenv XDG_CACHE_HOME /workspace/.cache --setenv PYTHONPATH /runtime/deps --setenv PYTHONDONTWRITEBYTECODE 1 --setenv HF_HUB_OFFLINE 1 --setenv HF_HOME /workspace/.cache/huggingface --setenv FONTCONFIG_FILE /runtime/fonts.conf --setenv OMP_NUM_THREADS 6 --setenv OPENBLAS_NUM_THREADS 6 --setenv TOKENIZERS_PARALLELISM false /usr/bin/python3 /runtime/inside.py official
+    341       0  0.0  0.0 ps              ps -eo pid,etimes,pcpu,pmem,comm,args --sort=-pcpu
+</pre></details><details><summary>10 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from PIL import Image,ImageOps,ImageDraw
+from pathlib import Path
+files=sorted(Path(&#x27;/workspace/scratch&#x27;).glob(&#x27;frame_*.png&#x27;)</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from PIL import Image,ImageOps,ImageDraw
+from pathlib import Path
+files=sorted(Path(&#x27;/workspace/scratch&#x27;).glob(&#x27;frame_*.png&#x27;))
+thumbs=[]
+for p in files:
+ im=Image.open(p).resize((480,270))
+ draw=ImageDraw.Draw(im)
+ draw.text((12,12),f&#x27;Frame {p.stem.split(\&quot;_\&quot;)[-1]}&#x27;,fill=&#x27;white&#x27;)
+ thumbs.append(im)
+sheet=Image.new(&#x27;RGB&#x27;,(480*3,270*((len(thumbs)+2)//3)),(24,24,24))
+for i,im in enumerate(thumbs): sheet.paste(im,((i%3)*480,(i//3)*270))
+sheet.save(&#x27;/workspace/scratch/contact_sheet.jpg&#x27;)
+print(&#x27;Contact frames:&#x27;,len(files))
+PY&quot;
+Contact frames: 9
+</pre></details><details><summary>11 · /usr/bin/bash -lc &quot;mkdir -p /workspace/scratch /workspace/submission
+cat &gt; /workspace/scratch/render_butterfly.py &lt;&lt;&#x27;PY&#x27;
+\&quot;\&quot;\&quot;Source-image butterfly animation.</summary><pre>/usr/bin/bash -lc &quot;mkdir -p /workspace/scratch /workspace/submission
+cat &gt; /workspace/scratch/render_butterfly.py &lt;&lt;&#x27;PY&#x27;
+\&quot;\&quot;\&quot;Source-image butterfly animation. Linux/OpenCV renderer; no After Effects.
+Four open -&gt; closed -&gt; open cycles, 150 frames, 30 fps, 1920 x 1080.
+All artwork comes from the supplied JPEG; only white is keyed out.
+\&quot;\&quot;\&quot;
+from pathlib import Path
+import json
+import subprocess
+import math
+import cv2
+import numpy as np
+from PIL import Image
+from scipy.ndimage import distance_transform_edt
+
+ROOT = Path(&#x27;/workspace/scratch&#x27;)
+OUT = Path(&#x27;/workspace/submission/output.mp4&#x27;)
+W, H, FPS, FRAMES = 1920, 1080, 30, 150
+F = 2500.0
+cv2.setNumThreads(4)
+source = np.asarray(Image.open(&#x27;/candidate/input/butterfly.jpeg&#x27;).convert(&#x27;RGB&#x27;)).astype(np.float32)
+chroma = source[..., 0] - source[..., 2]
+seed = (chroma &gt; 60).astype(np.uint8)
+count, labels, stats, centers = cv2.connectedComponentsWithStats(seed)
+# Assign the separate ornamental islands to their original anatomical layers.
+# Antennae and central body stay fixed while the wings rotate independently.
+assignment = np.zeros(count, np.uint8)
+for k in range(1, count):
+    x, y, w, h, area = stats[k]
+    if area &lt; 100:
+        continue
+    cx, cy = centers[k]
+    if (y &gt; 380 and 485 &lt;= cx &lt;= 515) or (100 &lt;= y &lt;= 115 and h &gt; 250):
+        assignment[k] = 3
+    else:
+        assignment[k] = 1 if cx &lt; 500 else 2
+nearest_dist, nearest = distance_transform_edt(labels == 0, return_indices=True)
+region = assignment[labels[nearest[0], nearest[1]]]
+alpha = np.clip((chroma - 3.0) / 252.0, 0, 1)
+alpha[nearest_dist &gt; 4] = 0
+# Remove the white matte in premultiplied space to avoid pale fringes on black.
+premult = np.clip(source / 255.0 - (1.0-alpha[..., None]), 0, 1)
+premult = np.minimum(premult, alpha[..., None])
+layers = []
+for k in [1, 2, 3]:
+    a = alpha * (region == k)
+    p = premult * (region == k)[..., None]
+    layers.append(np.dstack([p, a]).astype(np.float32))
+combined = sum(layer[..., :3] for layer in layers)
+Image.fromarray(np.uint8(np.clip(combined * 255, 0, 255))).save(ROOT/&#x27;isolated_artwork.png&#x27;)
+
+def ry(a):
+    c, s = math.cos(a), math.sin(a)
+    return np.array([[c,0,s],[0,1,0],[-s,0,c]], dtype=np.float64)
+
+def rx(a):
+    c, s = math.cos(a), math.sin(a)
+    return np.array([[1,0,0],[0,c,-s],[0,s,c]], dtype=np.float64)
+
+def rz(a):
+    c, s = math.cos(a), math.sin(a)
+    return np.array([[c,-s,0],[s,c,0],[0,0,1]], dtype=np.float64)
+
+def state(u):
+    # One full spatial loop. The vertical sinusoid has four turning points.
+    phase = 2 * math.pi * u
+    cx = W / 2 + 440 * math.sin(phase)
+    cy = H / 2 - 100 * math.sin(2 * phase)
+    scale = .76 + .04 * math.cos(phase)
+    roll = math.radians(8 * math.sin(phase) + 3 * math.sin(2 * phase))
+    # Exactly four smooth full flaps. Zero angular velocity at open and closed.
+    fold = math.radians(86) * .5 * (1 - math.cos(4 * phase))
+    pitch = math.radians(4 * math.sin(2 * phase))
+    return cx, cy, scale, roll, pitch, fold
+
+def homography(u, kind):
+    cx, cy, scale, roll, pitch, fold = state(u)
+    global_rotation = rz(roll) @ rx(pitch)
+    if kind == 0:
+        joint, angle = 480., fold
+    elif kind == 1:
+        joint, angle = 520., -fold
+    else:
+        joint, angle = 500., 0.
+    wing_rotation = ry(angle)
+    plane = np.column_stack((wing_rotation[:,0], wing_rotation[:,1],
+                             wing_rotation @ np.array([-joint,-410.,0.]) + np.array([joint-500.,0.,0.])))
+    plane = global_rotation @ plane
+    den = -plane[2].copy()
+    den[2] += F
+    mat = np.stack((scale*F*plane[0] + cx*den,
+                    scale*F*plane[1] + cy*den, den))
+    return mat, fold
+
+def render(u):
+    canvas = np.zeros((H,W,3), np.float32)
+    for kind in range(3):
+        mat, fold = homography(u, kind)
+        warped = cv2.warpPerspective(layers[kind], mat, (W,H), flags=cv2.INTER_LINEAR,
+                                    borderMode=cv2.BORDER_CONSTANT, borderValue=0)
+        # Gentle lighting makes the physical folding visible without recoloring the art.
+        light = 1. if kind == 2 else .78 + .22*math.cos(fold)
+        canvas *= 1. - warped[...,3,None]
+        canvas += light * warped[...,:3]
+    return canvas
+
+cmd = [&#x27;ffmpeg&#x27;,&#x27;-y&#x27;,&#x27;-hide_banner&#x27;,&#x27;-loglevel&#x27;,&#x27;warning&#x27;,
+       &#x27;-f&#x27;,&#x27;rawvideo&#x27;,&#x27;-pixel_format&#x27;,&#x27;rgb24&#x27;,&#x27;-video_size&#x27;,f&#x27;{W}x{H}&#x27;,
+       &#x27;-framerate&#x27;,str(FPS),&#x27;-i&#x27;,&#x27;pipe:0&#x27;,&#x27;-an&#x27;,&#x27;-c:v&#x27;,&#x27;libx264&#x27;,
+       &#x27;-preset&#x27;,&#x27;slow&#x27;,&#x27;-crf&#x27;,&#x27;16&#x27;,&#x27;-pix_fmt&#x27;,&#x27;yuv420p&#x27;,&#x27;-profile:v&#x27;,&#x27;high&#x27;,
+       &#x27;-level&#x27;,&#x27;4.1&#x27;,&#x27;-movflags&#x27;,&#x27;+faststart&#x27;,&#x27;-color_primaries&#x27;,&#x27;bt709&#x27;,
+       &#x27;-color_trc&#x27;,&#x27;bt709&#x27;,&#x27;-colorspace&#x27;,&#x27;bt709&#x27;,
+       &#x27;-vf&#x27;,&#x27;scale=in_range=full:out_range=tv:out_color_matrix=bt709&#x27;,
+       &#x27;-metadata&#x27;,&#x27;title=Butterfly | Four Wing Flaps&#x27;,
+       &#x27;-metadata&#x27;,&#x27;comment=Created from the supplied butterfly artwork with local Python and OpenCV; Adobe After Effects was unavailable and was not used.&#x27;,
+       str(OUT)]
+process = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+# A short, centered shutter adds restrained antialiasing to fast moving edges.
+# Endpoint samples wrap so the first and last pictures are identical.
+shutter_offsets = [-.16, 0., .16]
+preview_indices = {0, 9, 19, 28, 37, 56, 75, 94, 112, 131, 149}
+manifest = []
+for frame in range(FRAMES):
+    u = frame / (FRAMES-1)
+    picture = np.zeros((H,W,3), np.float32)
+    for offset in shutter_offsets:
+        picture += render((u + offset/(FRAMES-1)) % 1.) / len(shutter_offsets)
+    pixels = np.clip(picture*255+.5, 0, 255).astype(np.uint8)
+    process.stdin.write(pixels.tobytes())
+    if frame in preview_indices:
+        Image.fromarray(pixels).save(ROOT/f&#x27;frame_{frame:03d}.png&#x27;)
+    nonzero = np.any(pixels &gt; 10, axis=2)
+    ys, xs = np.where(nonzero)
+    manifest.append({&#x27;frame&#x27;: frame, &#x27;center&#x27;: state(u)[:2],
+                     &#x27;fold_degrees&#x27;: math.degrees(state(u)[-1]),
+                     &#x27;bounds&#x27;: [int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())]})
+    if frame % 15 == 0:
+        print(f&#x27;Rendered {frame+1}/{FRAMES}&#x27;, flush=True)
+process.stdin.close()
+if process.wait() &quot;&#x27;!= 0:
+    raise RuntimeError(&#x27;&quot;&#x27;FFmpeg encoding failed&#x27;)
+(ROOT/&#x27;render_manifest.json&#x27;).write_text(json.dumps(manifest, indent=2))
+print(f&#x27;Completed: {OUT}&#x27;, flush=True)
+PY
+python /workspace/scratch/render_butterfly.py&quot;
+Rendered 1/150
+Rendered 16/150
+Rendered 31/150
+Rendered 46/150
+Rendered 61/150
+Rendered 76/150
+Rendered 91/150
+Rendered 106/150
+Rendered 121/150
+Rendered 136/150
+Completed: /workspace/submission/output.mp4
+</pre></details><details><summary>12 · The animation has rendered with separate wing hinges and perspective folding. I’m checking the encoded file’s duration, frame rate, flap count, and framing. Aft</summary><pre>
+The animation has rendered with separate wing hinges and perspective folding. I’m checking the encoded file’s duration, frame rate, flap count, and framing. After Effects was unavailable, so the video was made with Python, OpenCV, and FFmpeg.</pre></details><details><summary>13 · /usr/bin/bash -lc &#x27;ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,profile,width,height,pix_fmt,r_frame_rate,avg_frame_rate,nb_frames,durat</summary><pre>/usr/bin/bash -lc &#x27;ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,profile,width,height,pix_fmt,r_frame_rate,avg_frame_rate,nb_frames,duration -show_entries format=duration,size,tags -of json /workspace/submission/output.mp4&#x27;
+{
+    &quot;programs&quot;: [
+
+    ],
+    &quot;streams&quot;: [
+        {
+            &quot;codec_name&quot;: &quot;h264&quot;,
+            &quot;profile&quot;: &quot;High&quot;,
+            &quot;width&quot;: 1920,
+            &quot;height&quot;: 1080,
+            &quot;pix_fmt&quot;: &quot;yuv420p&quot;,
+            &quot;r_frame_rate&quot;: &quot;30/1&quot;,
+            &quot;avg_frame_rate&quot;: &quot;30/1&quot;,
+            &quot;duration&quot;: &quot;5.000000&quot;,
+            &quot;nb_frames&quot;: &quot;150&quot;
+        }
+    ],
+    &quot;format&quot;: {
+        &quot;duration&quot;: &quot;5.000000&quot;,
+        &quot;size&quot;: &quot;1419969&quot;
+    }
+}
+</pre></details><details><summary>14 · /usr/bin/bash -lc &#x27;ffmpeg -v error -i /workspace/submission/output.mp4 -f null -&#x27;</summary><pre>/usr/bin/bash -lc &#x27;ffmpeg -v error -i /workspace/submission/output.mp4 -f null -&#x27;
+</pre></details><details><summary>15 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import json
+import numpy as np
+from PIL import Image
+from scipy.signal import find_peaks
+from pathlib import Path
+rows=json.l</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import json
+import numpy as np
+from PIL import Image
+from scipy.signal import find_peaks
+from pathlib import Path
+rows=json.loads(Path(&#x27;/workspace/scratch/render_manifest.json&#x27;).read_text())
+a=np.array([r[&#x27;fold_degrees&#x27;] for r in rows])
+y=np.array([r[&#x27;center&#x27;][1] for r in rows])
+b=np.array([r[&#x27;bounds&#x27;] for r in rows])
+print(&#x27;Closed-wing peaks:&#x27;,find_peaks(a)[0].tolist())
+print(&#x27;Vertical turning points:&#x27;,sorted([*find_peaks(y)[0],*find_peaks(-y)[0]]))
+print(&#x27;First/last wing rotation:&#x27;,a[0],a[-1])
+print(&#x27;Total artwork bounds:&#x27;,[b[:,0].min(),b[:,1].min(),b[:,2].max(),b[:,3].max()])
+f0=np.asarray(Image.open(&#x27;/workspace/scratch/frame_000.png&#x27;)).astype(float)
+f1=np.asarray(Image.open(&#x27;/workspace/scratch/frame_149.png&#x27;)).astype(float)
+print(&#x27;Loop endpoint pixel error:&#x27;,np.max(np.abs(f0-f1)))
+assert len(find_peaks(a)[0])==4
+assert len(find_peaks(y)[0])+len(find_peaks(-y)[0]) &gt;= 2
+assert b[:,0].min()&gt;0 and b[:,1].min()&gt;0 and b[:,2].max()&lt;1919 and b[:,3].max()&lt;1079
+assert np.max(np.abs(f0-f1)) == 0
+print(&#x27;All animation checks passed.&#x27;)
+PY&quot;
+Closed-wing peaks: [19, 56, 93, 130]
+Vertical turning points: [np.int64(19), np.int64(56), np.int64(93), np.int64(130)]
+First/last wing rotation: 0.0 0.0
+Total artwork bounds: [np.int64(109), np.int64(29), np.int64(1809), np.int64(929)]
+Loop endpoint pixel error: 0.0
+All animation checks passed.
+</pre></details><details><summary>16 · Created [output.mp4](/workspace/submission/output.mp4): 1080p H.264, 30 fps, 5 seconds, exactly four wing-flap cycles, and a smooth looping path.
+
+Verified enco</summary><pre>
+Created [output.mp4](/workspace/submission/output.mp4): 1080p H.264, 30 fps, 5 seconds, exactly four wing-flap cycles, and a smooth looping path.
+
+Verified encoding and framing. The After Effects requirement is unmet; Python, OpenCV, and FFmpeg were used as authorized.</pre></details>

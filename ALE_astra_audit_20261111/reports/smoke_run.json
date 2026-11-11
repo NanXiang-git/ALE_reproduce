@@ -1,0 +1,18 @@
+{
+  "case": "smoke",
+  "source_case": "smoke",
+  "mode": "smoke",
+  "host_process_returncode": 0,
+  "host_start_unix": 1794327511.673793,
+  "host_end_unix": 1794327665.9146693,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "smoke",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1794327665.5482485,
+    "elapsed_seconds": 153.3707513809204
+  }
+}

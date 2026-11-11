@@ -1,0 +1,63 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "original_temperature": 0,
+  "temperature_sent": false,
+  "transport": "Responses API; not prior subscription Codex judge",
+  "deadline": 1794331783.8436418,
+  "http_status": 200,
+  "status": "completed",
+  "usage": {
+    "input_tokens": 9769,
+    "input_tokens_details": {
+      "cached_tokens": 4096,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 336,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 10105,
+    "attribution": {
+      "items": {
+        "msg_0cc4e778f5f87dc8016af34d80791c87d0a72ed9b478b4fa9e": {
+          "input_tokens": 5551,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 5551,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0cc4e778f5f87dc8016af34d81e90087d08b8cf5a699688f8b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 336,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 336
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 4216,
+          "cached_tokens": 4096,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 8.91370153427124
+}

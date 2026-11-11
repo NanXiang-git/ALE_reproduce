@@ -1,0 +1,22 @@
+{
+  "video_storyboard_001": {
+    "api_calls": 34,
+    "completed_calls": 34,
+    "errors": 0,
+    "input_hashes_unchanged": true,
+    "submission_hashes_verified": true,
+    "elapsed_grading_seconds": 8.93537449836731
+  },
+  "butterfly_flap_animation": {
+    "api_calls": 15,
+    "completed_calls": 15,
+    "errors": 0,
+    "input_hashes_unchanged": true,
+    "submission_hashes_verified": true,
+    "elapsed_grading_seconds": 3.618894577026367
+  },
+  "acceptance_hashes_verified": true,
+  "dashboard_links_checked": 23,
+  "credential_pattern_scan_files": 87,
+  "scoring_cache_reused": false
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/butterfly.jpeg",
+    "bytes": 121169,
+    "sha256": "fa21d6b290b9d865cb44ccabf0b090e7b05903994259d5aaaf3ba7cb7e8fcdbf"
+  },
+  {
+    "path": "input/task_spec.md",
+    "bytes": 1385,
+    "sha256": "c68bd57e8982cdf8faa1c074c10fe1a341e47a9315b96bfd9a960c36de709bca"
+  },
+  {
+    "path": "software/launch_after_effects.bat",
+    "bytes": 452,
+    "sha256": "a4b7ae915c4c630390dc7f28dc3a497e13f2298a79425d968e800520ec50c4da"
+  },
+  {
+    "path": "TASK.md",
+    "bytes": 1553,
+    "sha256": "d2ccd0c1847e1878d659b2afdbe4ebee054496924999191a2974d95c4468854f"
+  }
+]

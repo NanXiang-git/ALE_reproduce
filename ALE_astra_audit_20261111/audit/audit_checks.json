@@ -1,0 +1,96 @@
+{
+  "qc_document": {
+    "members": [
+      "[Content_Types].xml",
+      "_rels/",
+      "_rels/.rels",
+      "customXml/",
+      "customXml/_rels/",
+      "customXml/_rels/item1.xml.rels",
+      "customXml/item1.xml",
+      "customXml/itemProps1.xml",
+      "docProps/",
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "docProps/custom.xml",
+      "docProps/thumbnail.wmf",
+      "word/",
+      "word/_rels/",
+      "word/_rels/document.xml.rels",
+      "word/document.xml",
+      "word/endnotes.xml",
+      "word/fontTable.xml",
+      "word/footnotes.xml",
+      "word/numbering.xml",
+      "word/settings.xml",
+      "word/styles.xml",
+      "word/theme/",
+      "word/theme/theme1.xml"
+    ],
+    "visible_text_chars": 1610,
+    "answer_marker_matches": [],
+    "comments_or_embeddings": [
+      "customXml/",
+      "customXml/_rels/",
+      "customXml/_rels/item1.xml.rels",
+      "customXml/item1.xml",
+      "customXml/itemProps1.xml"
+    ],
+    "public_by_official_task": true
+  },
+  "input_hashes": {
+    "video_storyboard_001": {
+      "input\\video_storyboard_qa_set.docx": true,
+      "input\\Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv": true
+    },
+    "butterfly_flap_animation": {
+      "input\\butterfly.jpeg": true,
+      "input\\task_spec.md": true
+    }
+  },
+  "source_hashes": {
+    "storyboard": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+    "butterfly": "7895701aba835e2c2edce5190c160103470bf51294dd19d701c5f0255e075c60"
+  },
+  "video_storyboard_001_history": {
+    "sha256": "300d62c402115a2c30a1993e6c05fff8fdfc445aab48397a63316782b6e6f0d7",
+    "structure": "dict",
+    "top_keys": [
+      "task_id",
+      "thread_id",
+      "item_type_counts",
+      "omitted_type_counts",
+      "items",
+      "error",
+      "next_cursor",
+      "scope"
+    ]
+  },
+  "butterfly_flap_animation_history": {
+    "sha256": "5d3d70cd507c9f672be64fa9935ff62b8a73cb02a6f03fb473e4590e086f2a47",
+    "structure": "dict",
+    "top_keys": [
+      "task_id",
+      "thread_id",
+      "item_type_counts",
+      "omitted_type_counts",
+      "items",
+      "error",
+      "next_cursor",
+      "scope"
+    ]
+  },
+  "old_butterfly_script": {
+    "path": "runs/butterfly_flap_animation/attempt_002/work/render.py",
+    "sha256": "88823824d1105fdd46698663524b84a7df2782fc4b9ca259d74655488b482471",
+    "uses_opencv_ffmpeg": true,
+    "after_effects_evidence": false
+  },
+  "old_butterfly_recomputed": 0.974035,
+  "butterfly_controls": {
+    "static": 0.36281,
+    "moving_rectangle": 0.55,
+    "pulsing_rectangle": 0.91281,
+    "pulsing_rectangle_1080p": 0.912812
+  }
+}

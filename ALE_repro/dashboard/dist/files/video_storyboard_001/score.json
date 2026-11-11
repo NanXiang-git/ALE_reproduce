@@ -1,0 +1,74 @@
+{
+  "task_id": "visual_media/video_storyboard_001",
+  "score": 1.0,
+  "status": "graded",
+  "utc": "2026-11-10T09:37:19.043616+00:00",
+  "solver_run_status": "completed",
+  "solver_input_unchanged": true,
+  "artifact_from_interrupted_attempt": false,
+  "judge_model": "gpt-6.1-sol",
+  "original_judge_model": "gpt-5.4",
+  "judge_transport": "Codex ChatGPT subscription",
+  "official_judge_reproduced": false,
+  "score_comparability": "Original grading prompt and answer normalization, alternative subscription judge. Not an exact reproduction of the original gpt-5.4 evaluation.",
+  "details": {
+    "score": 1.0,
+    "correct_count": 10,
+    "total_questions": 10,
+    "answers": {
+      "Q1": "B",
+      "Q2": "A",
+      "Q3": "C",
+      "Q4": "B",
+      "Q5": "A",
+      "Q6": "C",
+      "Q7": "C",
+      "Q8": "C",
+      "Q9": "B",
+      "Q10": "D"
+    },
+    "correct": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": true,
+      "Q4": true,
+      "Q5": true,
+      "Q6": true,
+      "Q7": true,
+      "Q8": true,
+      "Q9": true,
+      "Q10": true
+    },
+    "raw_judge_payload": {
+      "answers": {
+        "Q1": "B",
+        "Q2": "A",
+        "Q3": "C",
+        "Q4": "B",
+        "Q5": "A",
+        "Q6": "C",
+        "Q7": "C",
+        "Q8": "C",
+        "Q9": "B",
+        "Q10": "D"
+      },
+      "evidence": {
+        "Q1": "a village meeting about measures against the wolf",
+        "Q2": "The monkey walks out first and points ahead.",
+        "Q3": "The bushy-tailed squirrel climbs a vertical wooden ladder fixed against a house wall.",
+        "Q4": "A dark, shadow-like monkey silhouette with a curled tail appears next to it.",
+        "Q5": "the wolf walking right over snow at the foot of a wooded, rocky hillside",
+        "Q6": "two sheer cliff edges separated by a deep open ravine",
+        "Q7": "The long chain of monkeys extends from the tree on the left, swings downward and stretches across to the right rim, forming a sagging living bridge.",
+        "Q8": "The lead monkey points across, then steps onto the linked monkeys and runs from left to right over their backs.",
+        "Q9": "the wolf walks to the left end of the living bridge and steps out onto the linked bodies",
+        "Q10": "The wolf drops between them into the ravine and passes out of view below."
+      }
+    },
+    "storyboard_character_count": 15751,
+    "question_character_count": 1610
+  },
+  "evaluator_file_sha256": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+  "submission_sha256": "f4df24b4fa2a989d59d901cc1649dd9a8076a2312a02d354b80913bd872d452e",
+  "evaluation_elapsed_s": 136.115
+}

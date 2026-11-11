@@ -1,0 +1,12 @@
+{
+  "video_storyboard_001": {
+    "commands": 16,
+    "potential_access_matches": [],
+    "note": "Pattern scan is supplemental; enforced namespace and gateway isolation are primary evidence. Matches require context review."
+  },
+  "butterfly_flap_animation": {
+    "commands": 12,
+    "potential_access_matches": [],
+    "note": "Pattern scan is supplemental; enforced namespace and gateway isolation are primary evidence. Matches require context review."
+  }
+}

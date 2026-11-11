@@ -1,0 +1,11 @@
+{
+  "reason": "Prior deterministic evaluator returned after 6505 seconds wall time; original result retained, excluded from in-budget result. Possible host clock/suspension incident; precise cause not established.",
+  "same_frozen_submission": true,
+  "solver_rerun": false,
+  "quality_feedback": false,
+  "prior_score": 1.0,
+  "new_score": 1.0,
+  "wall_seconds": 4.418837070465088,
+  "monotonic_seconds": 4.432720900000277,
+  "within_30_minutes": true
+}

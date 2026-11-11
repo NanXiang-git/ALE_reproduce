@@ -1,0 +1,64 @@
+{
+  "score": 0.0,
+  "correct_count": 0,
+  "total_questions": 10,
+  "answers": {
+    "Q1": "UNKNOWN",
+    "Q2": "UNKNOWN",
+    "Q3": "UNKNOWN",
+    "Q4": "UNKNOWN",
+    "Q5": "UNKNOWN",
+    "Q6": "UNKNOWN",
+    "Q7": "UNKNOWN",
+    "Q8": "UNKNOWN",
+    "Q9": "UNKNOWN",
+    "Q10": "UNKNOWN"
+  },
+  "correct": {
+    "Q1": false,
+    "Q2": false,
+    "Q3": false,
+    "Q4": false,
+    "Q5": false,
+    "Q6": false,
+    "Q7": false,
+    "Q8": false,
+    "Q9": false,
+    "Q10": false
+  },
+  "raw_judge_payload": {
+    "answers": {
+      "Q1": "UNKNOWN",
+      "Q2": "UNKNOWN",
+      "Q3": "UNKNOWN",
+      "Q4": "UNKNOWN",
+      "Q5": "UNKNOWN",
+      "Q6": "UNKNOWN",
+      "Q7": "UNKNOWN",
+      "Q8": "UNKNOWN",
+      "Q9": "UNKNOWN",
+      "Q10": "UNKNOWN"
+    },
+    "evidence": {
+      "Q1": "UNKNOWN",
+      "Q2": "UNKNOWN",
+      "Q3": "UNKNOWN",
+      "Q4": "UNKNOWN",
+      "Q5": "UNKNOWN",
+      "Q6": "UNKNOWN",
+      "Q7": "UNKNOWN",
+      "Q8": "UNKNOWN",
+      "Q9": "UNKNOWN",
+      "Q10": "UNKNOWN"
+    }
+  },
+  "storyboard_character_count": 102,
+  "question_character_count": 1610,
+  "submission_sha256": "74bd76d71b49d1f979865201da95841bb25d240e47f3953dd77d49fc24ac285d",
+  "questions_sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+  "evaluator_sha256": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "temperature_difference": "official0 not sent with high reasoning; recorded not equivalent",
+  "score_scale": "0..1"
+}

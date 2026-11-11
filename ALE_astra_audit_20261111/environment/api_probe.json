@@ -1,0 +1,134 @@
+[
+  {
+    "requested_model": "gpt-6-astra",
+    "http_status": 200,
+    "model": "gpt-6-astra",
+    "status": "completed",
+    "reasoning": {
+      "effort": "high",
+      "context": "all_turns",
+      "summary": null,
+      "mode": "standard"
+    },
+    "elapsed": 2.952656299999944,
+    "usage": {
+      "input_tokens": 4128,
+      "input_tokens_details": {
+        "cached_tokens": 3968,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 8,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4136,
+      "attribution": {
+        "items": {
+          "msg_08c373e99e39bba6016af343c1c17487d187e228fad2ef7143": {
+            "input_tokens": 12,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0,
+            "content": [
+              {
+                "input_tokens": 12,
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "output_tokens": 0
+              }
+            ]
+          },
+          "msg_08c373e99e39bba6016af343c330dc87d199553beea634b22a": {
+            "input_tokens": 2,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 8,
+            "content": [
+              {
+                "input_tokens": 2,
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "output_tokens": 8
+              }
+            ]
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "input_tokens": 4114,
+            "cached_tokens": 3968,
+            "cache_write_tokens": 0,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    "text": "ALE_PROBE_OK"
+  },
+  {
+    "requested_model": "gpt-6.1-sol",
+    "http_status": 200,
+    "model": "gpt-6.1-sol",
+    "status": "completed",
+    "reasoning": {
+      "effort": "high",
+      "context": "all_turns",
+      "summary": null,
+      "mode": "standard"
+    },
+    "elapsed": 2.661880999999994,
+    "usage": {
+      "input_tokens": 4230,
+      "input_tokens_details": {
+        "cached_tokens": 4096,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 8,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4238,
+      "attribution": {
+        "items": {
+          "msg_0547fcba0052053f016af343c425bc87d0aa84b9bbbc51a122": {
+            "input_tokens": 12,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0,
+            "content": [
+              {
+                "input_tokens": 12,
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "output_tokens": 0
+              }
+            ]
+          },
+          "msg_0547fcba0052053f016af343c6087487d09247ce2a80331870": {
+            "input_tokens": 2,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 8,
+            "content": [
+              {
+                "input_tokens": 2,
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "output_tokens": 8
+              }
+            ]
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "input_tokens": 4216,
+            "cached_tokens": 4096,
+            "cache_write_tokens": 0,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    "text": "ALE_PROBE_OK"
+  }
+]

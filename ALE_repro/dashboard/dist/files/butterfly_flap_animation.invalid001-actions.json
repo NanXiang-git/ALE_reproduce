@@ -1,0 +1,102 @@
+{
+  "task_id": "visual_media/butterfly_flap_animation.invalid001",
+  "thread_id": "01a1c495-db44-7171-b3cf-a17aaab9ce9d",
+  "item_type_counts": {
+    "userMessage": 1,
+    "agentMessage": 2,
+    "reasoning": 4,
+    "mcpToolCall": 1
+  },
+  "omitted_type_counts": {
+    "userMessage": 1,
+    "reasoning": 4
+  },
+  "items": [
+    {
+      "turnId": "01a1c495-e07b-7ea3-85a1-98f0ce88d106",
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_0ca335b85d5e29d2016af2d6fb1fd487d08670efb9eb6958e9",
+        "text": "I’ll inspect the source artwork and task spec, then create and check the animation with four complete flaps and a smooth curved flight path.\n",
+        "phase": "commentary",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794299641536,
+        "completedAtMs": 1794299642675
+      },
+      "startedAtMs": 1794299641536,
+      "completedAtMs": 1794299642675
+    },
+    {
+      "turnId": "01a1c495-e07b-7ea3-85a1-98f0ce88d106",
+      "item": {
+        "type": "mcpToolCall",
+        "id": "exec-fc3d0035-dd7b-4d1e-b7fb-a170572bb44a",
+        "server": "codex_apps",
+        "tool": "codex_document_control.list_document_sessions",
+        "status": "completed",
+        "arguments": {},
+        "appContext": {
+          "connectorId": "connector_openai_codex_document_control",
+          "linkId": "implicit_link::connector_openai_codex_document_control",
+          "resourceUri": null,
+          "appName": "Codex Document Control",
+          "actionName": "list_document_sessions"
+        },
+        "mcpAppUi": null,
+        "pluginId": null,
+        "readOnlyHint": true,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "No connected Codex document sessions were found.",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": {
+              "executors": []
+            },
+            "isError": false
+          },
+          "_meta": null
+        },
+        "error": null,
+        "durationMs": 2321,
+        "startedAtMs": 1794299664556,
+        "completedAtMs": 1794299666884
+      },
+      "startedAtMs": 1794299664556,
+      "completedAtMs": 1794299666884
+    },
+    {
+      "turnId": "01a1c495-e07b-7ea3-85a1-98f0ce88d106",
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_0ca335b85d5e29d2016af2d71b08a087d0a9173313d6fe38fb",
+        "text": "I couldn’t create `output/output.mp4` because this session has read-only filesystem access and blocks PowerShell and CMD execution. No animation was rendered.\n\nPlease rerun with write access to `work/` and `output/` and permission to execute local tools.",
+        "phase": "final_answer",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794299673494,
+        "completedAtMs": 1794299675085
+      },
+      "startedAtMs": 1794299673494,
+      "completedAtMs": 1794299675085
+    }
+  ],
+  "error": null,
+  "next_cursor": null,
+  "scope": "Action/observation history only; private reasoning, system/developer messages and binary payloads are not exported."
+}

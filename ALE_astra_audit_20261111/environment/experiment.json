@@ -1,0 +1,67 @@
+{
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "solver_budget_seconds": 7200,
+  "evaluation_budget_seconds": 1800,
+  "judge_model": "gpt-6.1-sol",
+  "judge_effort": "high",
+  "old_experiment": {
+    "code_commit": "d9abc0734b56ea34116c5bfcbdd0b808269ab9e2",
+    "code_release": "v1",
+    "data_revision": "e9a2674a62f7d8069f136e642c10e8d8e9979dbf",
+    "data_note": "Pinned currently published input data; equality to the original v1 VM inputs has not been established.",
+    "physical_output_root": "D:\\omniALE\\ALE复现",
+    "ascii_access_junction": "D:\\omniALE\\ALE_repro",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "codex_version": "0.167.0-alpha.3.2",
+    "provider": "openai",
+    "auth_mode": "chatgpt",
+    "account_plan": "plus",
+    "billing": "included subscription usage only",
+    "judge_model": "gpt-6.1-sol",
+    "host": "Windows native",
+    "strict_official_environment": false,
+    "limitations": [
+      "Official legacy VM and patched Codex fork are not used.",
+      "Original screenshot run/model/trace not identified; 1.0000 is from user screenshot, butterfly baseline unknown.",
+      "Local filesystem separation is not a VM security boundary.",
+      "Attempt 001 was invalid due to read-only runtime; retained as an infrastructure incident."
+    ],
+    "cases": [
+      {
+        "task_id": "visual_media/video_storyboard_001",
+        "folder": "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002",
+        "input_sha256": {
+          "input\\video_storyboard_qa_set.docx": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+          "input\\Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv": "420869f68228ae6406627c7edf0f3c44984fb4530f0859cda5928c5ad139079e"
+        },
+        "official_prompt_sha256": "e1fb8352dd4f26ffafb64fef8a46eb5d6179db63b03ff7d976d1ae86225dc5cf",
+        "source_sha256": "1eab24298fc48edd1ca20ff21439d497fcd26fec99f5180b543dc60a67a8aa12",
+        "wall_time_s": 7200
+      },
+      {
+        "task_id": "visual_media/butterfly_flap_animation",
+        "folder": "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002",
+        "input_sha256": {
+          "input\\butterfly.jpeg": "fa21d6b290b9d865cb44ccabf0b090e7b05903994259d5aaaf3ba7cb7e8fcdbf",
+          "input\\task_spec.md": "c68bd57e8982cdf8faa1c074c10fe1a341e47a9315b96bfd9a960c36de709bca"
+        },
+        "official_prompt_sha256": "475482aa27b88e15b8336dcf811070f0fd534101a67d86375088491375caad39",
+        "source_sha256": "92b47471881ed96958f7cf2077af2fc486dd8138c4dff933b8f0514c4db6d393",
+        "wall_time_s": 7200
+      }
+    ]
+  },
+  "mode": "API with isolated Codex harness; sequential new sessions",
+  "software_compliance": "User approved video artifact-score replication without AE; software requirement marked unmet",
+  "status": "complete",
+  "acceptance_passed": true,
+  "grading_cache_policy": "No score reuse; unique frozen attempt, request and response stored with input/grader/submission hashes",
+  "final_scores": {
+    "video_storyboard_001": 1.0,
+    "butterfly_flap_animation": 1.0
+  },
+  "secondary_judge_status": "GPT-5.4 HTTP 429; no score",
+  "evaluation_incident": "Butterfly first evaluation exceeded wall-clock cap; archived, same frozen submission rechecked in 4.42s with score1.0. Solver not rerun."
+}

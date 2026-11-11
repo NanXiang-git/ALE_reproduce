@@ -1,0 +1,102 @@
+{
+  "task_id": "visual_media/video_storyboard_001.invalid001",
+  "thread_id": "01a1c493-87a1-77f3-a547-aa335028f771",
+  "item_type_counts": {
+    "userMessage": 1,
+    "agentMessage": 2,
+    "reasoning": 3,
+    "mcpToolCall": 1
+  },
+  "omitted_type_counts": {
+    "userMessage": 1,
+    "reasoning": 3
+  },
+  "items": [
+    {
+      "turnId": "01a1c493-8e7c-7dd0-8630-cfa805a4523f",
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_0f373e3d57b5ac55016af2d65d1d7487d08ea9c2121c4395ab",
+        "text": "I’ll read the QC brief and inspect the film in sequence, then create a timecoded shot log grounded in the visible action and intertitles.",
+        "phase": "commentary",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794299483514,
+        "completedAtMs": 1794299484711
+      },
+      "startedAtMs": 1794299483514,
+      "completedAtMs": 1794299484711
+    },
+    {
+      "turnId": "01a1c493-8e7c-7dd0-8630-cfa805a4523f",
+      "item": {
+        "type": "mcpToolCall",
+        "id": "exec-e8e97f6c-ec99-4f68-8179-ab791453cf69",
+        "server": "codex_apps",
+        "tool": "codex_document_control.list_document_sessions",
+        "status": "completed",
+        "arguments": {},
+        "appContext": {
+          "connectorId": "connector_openai_codex_document_control",
+          "linkId": "implicit_link::connector_openai_codex_document_control",
+          "resourceUri": null,
+          "appName": "Codex Document Control",
+          "actionName": "list_document_sessions"
+        },
+        "mcpAppUi": null,
+        "pluginId": null,
+        "readOnlyHint": true,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "No connected Codex document sessions were found.",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": {
+              "executors": []
+            },
+            "isError": false
+          },
+          "_meta": null
+        },
+        "error": null,
+        "durationMs": 1790,
+        "startedAtMs": 1794299497204,
+        "completedAtMs": 1794299498996
+      },
+      "startedAtMs": 1794299497204,
+      "completedAtMs": 1794299498996
+    },
+    {
+      "turnId": "01a1c493-8e7c-7dd0-8630-cfa805a4523f",
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_0f373e3d57b5ac55016af2d6745f7c87d094441b742f332216",
+        "text": "I couldn’t create `output/storyboard.docx`. This session is read-only, and the environment blocked command execution, preventing me from inspecting the film and QC brief or saving the document.\n\nPlease rerun with command execution and write access to `work/` and `output/` enabled.",
+        "phase": "final_answer",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794299506901,
+        "completedAtMs": 1794299508751
+      },
+      "startedAtMs": 1794299506901,
+      "completedAtMs": 1794299508751
+    }
+  ],
+  "error": null,
+  "next_cursor": null,
+  "scope": "Action/observation history only; private reasoning, system/developer messages and binary payloads are not exported."
+}

@@ -1,0 +1,8 @@
+{
+  "http_status": 429,
+  "elapsed_seconds": 47.56287097930908,
+  "combined_deadline_unix": 1794331783.8440788,
+  "model": "gpt-5.4",
+  "temperature": 0,
+  "max_completion_tokens": 2200
+}

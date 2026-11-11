@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "network": "bwrap unshare-all network namespace; no default route; external TCP denied; only host model proxy over stdio",
+  "filesystem": "candidate readonly, dedicated workspace, runtime-only libraries; host/evaluator/old answers not mounted",
+  "gateway_tests": "wrong model, web search, remote image, prior conversation all rejected before network",
+  "watchdog_verified": true,
+  "model_image_input_verified": true,
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "codex": "0.163.0; differs from old0.167.0-alpha.3.2",
+  "initial_smoke": "dependency failure retained; not a benchmark attempt",
+  "hashes": {
+    "orchestrator\\guard_kill.py": "1ee31678c14bfda2d3c3fb381a5d203b64c3365535d36e7233491aeb26146369",
+    "orchestrator\\linux_launcher.py": "cf7a2809242b934b08f19ddd5fcdba7a60b3a17d3d259fd25a9cd724f0185bf3",
+    "orchestrator\\run_serial.py": "cc83328548a4fded4d29e0b64e60052690e0e979fd616dac3d377419d29b3891",
+    "environment\\runtime\\inside.py": "1049410ce58c9b1c1d9fdc241c93d4b6c9ae7520c628dcd3d3cc6c064e002232",
+    "environment\\runtime\\prompt.txt": "796e61999580b7030110c3365520021153bcf5671d0cfe3456c1ae25324477cc",
+    "candidate\\butterfly_flap_animation\\TASK.md": "d2ccd0c1847e1878d659b2afdbe4ebee054496924999191a2974d95c4468854f",
+    "candidate\\video_storyboard_001\\TASK.md": "b472efe07b0029e887bb72889fdc7329d5f85868cb2e25e1a554d70da5c0392d",
+    "candidate\\video_storyboard_001\\input\\video_storyboard_qa_set.docx": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+    "candidate\\video_storyboard_001\\input\\Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv": "420869f68228ae6406627c7edf0f3c44984fb4530f0859cda5928c5ad139079e",
+    "candidate\\video_storyboard_001\\software\\launch_word_processor.cmd": "cf12005c400765e353ab3f8fd56cc2199d3f8e4e39dc1e7427a17f3ee3092fe2",
+    "candidate\\butterfly_flap_animation\\input\\butterfly.jpeg": "fa21d6b290b9d865cb44ccabf0b090e7b05903994259d5aaaf3ba7cb7e8fcdbf",
+    "candidate\\butterfly_flap_animation\\input\\task_spec.md": "c68bd57e8982cdf8faa1c074c10fe1a341e47a9315b96bfd9a960c36de709bca",
+    "candidate\\butterfly_flap_animation\\software\\launch_after_effects.bat": "a4b7ae915c4c630390dc7f28dc3a497e13f2298a79425d968e800520ec50c4da"
+  },
+  "limits": [
+    "Not official ALE VM/harness",
+    "Backend model identity relies on provider response; client cannot inspect server internals",
+    "Offline inference tools do not rule out pretraining exposure",
+    "No AE; user approved artifact-score reproduction"
+  ]
+}

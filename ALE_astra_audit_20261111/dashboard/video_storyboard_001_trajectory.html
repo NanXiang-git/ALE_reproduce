@@ -1,0 +1,1079 @@
+<!doctype html><meta charset="utf-8"><title>工具运行轨迹</title><style>body{max-width:1100px;margin:auto;font:16px/1.6 system-ui;padding:24px}pre{white-space:pre-wrap;overflow-wrap:anywhere}details{border-bottom:1px solid #ccc;padding:10px}</style><a href="index.html">返回结果</a><h1>video_storyboard_001</h1><p>只展示公开动作，不展示内部推理。看图调用及图像哈希见JSON。</p><a href="video_storyboard_001_trajectory.json">下载轨迹JSON</a><details><summary>1 · I’ll read the task and inspect the supplied assets, then create the deliverables with local tools. I’ll clearly disclose that After Effects is unavailable and t</summary><pre>
+I’ll read the task and inspect the supplied assets, then create the deliverables with local tools. I’ll clearly disclose that After Effects is unavailable and the video is produced by script.</pre></details><details><summary>2 · /usr/bin/bash -lc &#x27;cat /candidate/TASK.md&#x27;</summary><pre>/usr/bin/bash -lc &#x27;cat /candidate/TASK.md&#x27;
+## Context
+
+A small restoration studio is about to begin a scan + remaster pass on a public-domain print of a vintage Yasuji Murata animation. Before any restoration work starts, the pipeline requires an **archival shot log / continuity report** of the source print: a temporal, per-shot factual record of what is on screen, written by an archival assistant editor.
+
+The QC team has handed you a **restoration fact-check brief** (a list of factual visual questions about the film). Your shot log must preserve enough detail that downstream QC engineers can verify every item in the brief by reading the log alone. As the archivist, you record facts — you do **not** answer the brief&#x27;s questions or insert interpretation. Answering is the QC engineers&#x27; job.
+
+## Input Files
+- Source print: `/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv`
+- QC fact-check brief: `/candidate/input/video_storyboard_qa_set.docx`
+
+## Software
+- Use any DOCX-capable workflow available on the VM.
+- A task-local launcher is available at: `/candidate/software/launch_word_processor.cmd`
+
+## Your Task
+1. Inspect the full source print end-to-end.
+2. Read the QC brief so the log preserves the facts each item in the brief depends on.
+3. Produce a concise, complete shot log in temporal order.
+4. Organize the log as shots or segments. Each shot or segment must include:
+   - shot or segment ID
+   - start time and end time
+   - brief visual description
+   - key actions or events
+   - important objects, people, animals, and scene details
+   - visible on-screen text or dialogue relevant to the brief
+5. Do **not** answer the brief&#x27;s questions in the log. Record only the observable facts a QC engineer would need to answer them.
+6. Use only information grounded in the source print. Do not add external knowledge, plot context, or interpretation.
+
+## Output
+- Save the final readable Word document exactly here: `/workspace/submission/storyboard.docx`
+- The output file must be a valid `.docx` file named `storyboard.docx`.
+</pre></details><details><summary>3 · /usr/bin/bash -lc &#x27;ls -la /candidate &amp;&amp; ls -la /workspace&#x27;</summary><pre>/usr/bin/bash -lc &#x27;ls -la /candidate &amp;&amp; ls -la /workspace&#x27;
+total 4
+drwxrwxrwx  1 1000 1000  512 Nov 10 16:36 .
+drwxr-xr-x 10 1000 1000  260 Nov 10 16:42 ..
+-rwxrwxrwx  1 1000 1000 2047 Nov 10 16:18 TASK.md
+drwxrwxrwx  1 1000 1000  512 Nov 10 03:24 input
+drwxrwxrwx  1 1000 1000  512 Nov 10 03:24 software
+total 0
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:42 .
+drwxr-xr-x 10 1000 1000 260 Nov 10 16:42 ..
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:42 .cache
+-rwxrwxrwx  1 1000 1000 119 Nov 10 16:42 DEADLINE.json
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:43 codex_home
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:42 home
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:42 scratch
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:42 submission
+drwxrwxrwx  1 1000 1000 512 Nov 10 16:42 tmp
+</pre></details><details><summary>4 · /usr/bin/bash -lc &quot;ffprobe -v error -show_format -show_streams &#x27;/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27;&quot;</summary><pre>/usr/bin/bash -lc &quot;ffprobe -v error -show_format -show_streams &#x27;/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27;&quot;
+[STREAM]
+index=0
+codec_name=theora
+codec_long_name=Theora
+profile=unknown
+codec_type=video
+codec_tag_string=[0][0][0][0]
+codec_tag=0x0000
+width=400
+height=300
+coded_width=400
+coded_height=304
+closed_captions=0
+film_grain=0
+has_b_frames=0
+sample_aspect_ratio=1:1
+display_aspect_ratio=4:3
+pix_fmt=yuv420p
+level=-99
+color_range=unknown
+color_space=unknown
+color_transfer=unknown
+color_primaries=unknown
+chroma_location=center
+field_order=unknown
+refs=1
+id=N/A
+r_frame_rate=2997/100
+avg_frame_rate=30000/1001
+time_base=100/2997
+start_pts=0
+start_time=0.000000
+duration_ts=20264
+duration=676.142809
+bit_rate=N/A
+max_bit_rate=N/A
+bits_per_raw_sample=N/A
+nb_frames=N/A
+nb_read_frames=N/A
+nb_read_packets=N/A
+extradata_size=3494
+DISPOSITION:default=0
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+DISPOSITION:timed_thumbnails=0
+DISPOSITION:non_diegetic=0
+DISPOSITION:captions=0
+DISPOSITION:descriptions=0
+DISPOSITION:metadata=0
+DISPOSITION:dependent=0
+DISPOSITION:still_image=0
+TAG:encoder=Lavc57.22.100 libtheora
+TAG:TITLE=[村田安司] 国立映画アーカイブ 日本アニメーション映画クラシックス WEB-DL
+TAG:DATE=1927
+TAG:LOCATION=https://archive.org/details/YasujiMurataJP
+[/STREAM]
+[STREAM]
+index=1
+codec_name=vorbis
+codec_long_name=Vorbis
+profile=unknown
+codec_type=audio
+codec_tag_string=[0][0][0][0]
+codec_tag=0x0000
+sample_fmt=fltp
+sample_rate=44100
+channels=2
+channel_layout=stereo
+bits_per_sample=0
+initial_padding=0
+id=N/A
+r_frame_rate=0/0
+avg_frame_rate=0/0
+time_base=1/44100
+start_pts=0
+start_time=0.000000
+duration_ts=29821479
+duration=676.224014
+bit_rate=128000
+max_bit_rate=N/A
+bits_per_raw_sample=N/A
+nb_frames=N/A
+nb_read_frames=N/A
+nb_read_packets=N/A
+extradata_size=4202
+DISPOSITION:default=0
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+DISPOSITION:timed_thumbnails=0
+DISPOSITION:non_diegetic=0
+DISPOSITION:captions=0
+DISPOSITION:descriptions=0
+DISPOSITION:metadata=0
+DISPOSITION:dependent=0
+DISPOSITION:still_image=0
+TAG:encoder=Lavc57.22.100 libvorbis
+TAG:TITLE=[村田安司] 国立映画アーカイブ 日本アニメーション映画クラシックス WEB-DL
+TAG:DATE=1927
+TAG:LOCATION=https://archive.org/details/YasujiMurataJP
+[/STREAM]
+[FORMAT]
+filename=/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv
+nb_streams=2
+nb_programs=0
+format_name=ogg
+format_long_name=Ogg
+start_time=0.000000
+duration=676.224014
+size=43694574
+bit_rate=516924
+probe_score=100
+[/FORMAT]
+</pre></details><details><summary>5 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from docx import Document
+p=&#x27;/candidate/input/video_storyboard_qa_set.docx&#x27;
+d=Document(p)
+for p in d.paragraphs:
+ if p.text: </summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from docx import Document
+p=&#x27;/candidate/input/video_storyboard_qa_set.docx&#x27;
+d=Document(p)
+for p in d.paragraphs:
+ if p.text: print(p.text)
+for t in d.tables:
+ for r in t.rows:
+  print(&#x27; | &#x27;.join(c.text for c in r.cells))
+PY&quot;
+QA Set for the Uploaded Video
+A Wolf is a Wolf (1931)
+Q1. Which animal is the main antagonist throughout the film?
+A. A fox
+B. A wolf
+C. A bear
+D. A tiger
+Q2. Which animal appears later as the clever helper who leads the final counterplan?   
+A. A monkey
+B. A deer
+C. A bird
+D. A dog
+Q3. During the village warning sequence, which animal is shown climbing a ladder attached to a house? 
+A. A rabbit
+B. A monkey
+C. A squirrel
+D. A raccoon dog
+Q4. What visual form introduces the monkey before the final plan is fully carried out?   
+A. A reflection in water
+B. A shadow silhouette
+C. A painting on a wall
+D. A mask on the ground
+Q5. Before the climax at the ravine, where is the wolf repeatedly shown moving?   
+A. Across snowy or rocky mountain terrain
+B. Inside a city street
+C. On a boat at sea
+D. In a factory
+Q6. What obstacle separates the sides in the final showdown?
+A. A river
+B. A wall of fire
+C. A deep ravine or chasm
+D. A locked gate
+Q7. What do the monkeys create so someone can cross the gap? 
+A. A wooden bridge
+B. A rope ladder
+C. A chain of monkeys forming a living bridge
+D. A stone staircase
+Q8. Who crosses the living bridge first?
+A. The wolf
+B. A rabbit
+C. The monkey
+D. The squirrel
+Q9. What does the wolf do immediately after seeing the crossing method work? 
+A. It runs back to the village
+B. It steps onto the living bridge and follows
+C. It hides behind a rock
+D. It starts digging under the cliff
+Q10. What is the final outcome for the wolf at the end of the bridge sequence?
+A. It safely reaches the far side
+B. It becomes trapped in a house
+C. It is tied to a tree
+D. It falls into the ravine
+</pre></details><details><summary>6 · The supplied task calls for a Word shot log of an 11-minute film. I’ve read the QC brief and will review the full print, with closer checks of the village warni</summary><pre>
+The supplied task calls for a Word shot log of an 11-minute film. I’ve read the QC brief and will review the full print, with closer checks of the village warning, monkey’s introduction, and ravine crossing to record their visible details and order.</pre></details><details><summary>7 · /usr/bin/bash -lc &quot;mkdir -p /workspace/scratch/frames /workspace/scratch/sheets /workspace/submission
+ffmpeg -v error -i &#x27;/candidate/input/Yasuji_Murata-_A_Wolf</summary><pre>/usr/bin/bash -lc &quot;mkdir -p /workspace/scratch/frames /workspace/scratch/sheets /workspace/submission
+ffmpeg -v error -i &#x27;/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27; -vf fps=1 -q:v 2 /workspace/scratch/frames/%04d.jpg&quot;
+</pre></details><details><summary>8 · /usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/contact.py &lt;&lt;&#x27;PY&#x27;
+from PIL import Image, ImageDraw, ImageFont
+from pathlib import Path
+import sys
+start,end,step=map</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/contact.py &lt;&lt;&#x27;PY&#x27;
+from PIL import Image, ImageDraw, ImageFont
+from pathlib import Path
+import sys
+start,end,step=map(int,sys.argv[1:4]); cols=int(sys.argv[4]) if len(sys.argv)&gt;4 else 5
+w,h=400,324
+files=list(range(start,end,step))
+im=Image.new(&#x27;RGB&#x27;,(cols*w,((len(files)+cols-1)//cols)*h),&#x27;#eee&#x27;)
+d=ImageDraw.Draw(im)
+f=ImageFont.truetype(&#x27;/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf&#x27;,18)
+for i,t in enumerate(files):
+ p=Path(f&#x27;/workspace/scratch/frames/{t+1:04d}.jpg&#x27;)
+ if not p.exists(): continue
+ x=i%cols*w; y=i//cols*h
+ im.paste(Image.open(p),(x,y+24)); d.text((x+8,y+1),f&#x27;{t//60:02d}:{t%60:02d}&#x27;,fill=&#x27;black&#x27;,font=f)
+p=f&#x27;/workspace/scratch/sheets/{start}_{end}_{step}.jpg&#x27;; im.save(p,quality=93); print(p)
+PY
+python /workspace/scratch/contact.py 0 150 5
+python /workspace/scratch/contact.py 150 300 5
+python /workspace/scratch/contact.py 300 450 5
+python /workspace/scratch/contact.py 450 600 5
+python /workspace/scratch/contact.py 600 677 3&quot;
+/workspace/scratch/sheets/0_150_5.jpg
+/workspace/scratch/sheets/150_300_5.jpg
+/workspace/scratch/sheets/300_450_5.jpg
+/workspace/scratch/sheets/450_600_5.jpg
+/workspace/scratch/sheets/600_677_3.jpg
+</pre></details><details><summary>9 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import subprocess
+for s in range(0,676,30):
+ subprocess.run([&#x27;python&#x27;,&#x27;/workspace/scratch/contact.py&#x27;,str(s),str(min(s+30,676</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import subprocess
+for s in range(0,676,30):
+ subprocess.run([&#x27;python&#x27;,&#x27;/workspace/scratch/contact.py&#x27;,str(s),str(min(s+30,676)),&#x27;1&#x27;],check=True)
+PY&quot;
+/workspace/scratch/sheets/0_30_1.jpg
+/workspace/scratch/sheets/30_60_1.jpg
+/workspace/scratch/sheets/60_90_1.jpg
+/workspace/scratch/sheets/90_120_1.jpg
+/workspace/scratch/sheets/120_150_1.jpg
+/workspace/scratch/sheets/150_180_1.jpg
+/workspace/scratch/sheets/180_210_1.jpg
+/workspace/scratch/sheets/210_240_1.jpg
+/workspace/scratch/sheets/240_270_1.jpg
+/workspace/scratch/sheets/270_300_1.jpg
+/workspace/scratch/sheets/300_330_1.jpg
+/workspace/scratch/sheets/330_360_1.jpg
+/workspace/scratch/sheets/360_390_1.jpg
+/workspace/scratch/sheets/390_420_1.jpg
+/workspace/scratch/sheets/420_450_1.jpg
+/workspace/scratch/sheets/450_480_1.jpg
+/workspace/scratch/sheets/480_510_1.jpg
+/workspace/scratch/sheets/510_540_1.jpg
+/workspace/scratch/sheets/540_570_1.jpg
+/workspace/scratch/sheets/570_600_1.jpg
+/workspace/scratch/sheets/600_630_1.jpg
+/workspace/scratch/sheets/630_660_1.jpg
+/workspace/scratch/sheets/660_676_1.jpg
+</pre></details><details><summary>10 · /usr/bin/bash -lc &quot;ffmpeg -v info -i &#x27;/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27; -vf \&quot;select=&#x27;gt(scene,0.20)&#x27;,showinfo\&quot; -an -f null - 2&gt; /wo</summary><pre>/usr/bin/bash -lc &quot;ffmpeg -v info -i &#x27;/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27; -vf \&quot;select=&#x27;gt(scene,0.20)&#x27;,showinfo\&quot; -an -f null - 2&gt; /workspace/scratch/scene_detect.txt&quot;
+</pre></details><details><summary>11 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import re
+s=open(&#x27;/workspace/scratch/scene_detect.txt&#x27;).read()
+print(&#x27;\\n&#x27;.join(re.findall(&#x27;pts_time:([0-9.]+)&#x27;,s)))
+PY&quot;</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+import re
+s=open(&#x27;/workspace/scratch/scene_detect.txt&#x27;).read()
+print(&#x27;\\n&#x27;.join(re.findall(&#x27;pts_time:([0-9.]+)&#x27;,s)))
+PY&quot;
+6.03937
+22.3223
+28.7287
+29.296
+38.4384
+40.7741
+45.2786
+52.2856
+54.9883
+55.322
+56.8235
+57.0904
+57.9246
+59.9266
+68.5352
+69.97
+74.0407
+75.1084
+83.4501
+86.1195
+86.2863
+90.0567
+106.573
+119.853
+127.261
+128.428
+131.098
+131.565
+131.665
+132.766
+133.734
+136.403
+139.673
+141.842
+143.177
+145.846
+148.182
+151.185
+151.385
+156.857
+168.902
+169.77
+187.754
+192.492
+196.63
+207.307
+210.177
+214.448
+219.286
+221.288
+227.461
+231.999
+241.608
+242.176
+242.776
+244.111
+244.278
+245.779
+250.35
+255.055
+260.561
+263.53
+266.366
+267.734
+270.037
+279.58
+280.247
+281.048
+281.849
+283.35
+284.518
+286.72
+289.323
+292.426
+293.026
+294.895
+296.43
+297.831
+299.666
+302.603
+310.677
+311.512
+313.213
+316.95
+320.053
+325.392
+331.899
+342.609
+343.877
+344.545
+371.004
+372.906
+373.24
+373.473
+376.31
+376.577
+376.844
+376.91
+377.444
+377.578
+377.744
+377.945
+379.58
+381.114
+381.415
+382.249
+382.416
+382.616
+396.496
+396.83
+397.531
+400.267
+403.17
+403.704
+406.139
+414.715
+417.117
+421.154
+430.864
+432.199
+435.702
+437.07
+439.673
+446.18
+450.25
+454.922
+458.692
+460.661
+461.328
+462.162
+462.262
+462.329
+464.431
+472.372
+477.711
+480.013
+483.217
+495.896
+498.866
+502.87
+506.406
+510.477
+511.812
+515.215
+525.125
+525.292
+526.226
+526.393
+528.061
+529.63
+533.467
+533.8
+533.901
+536.47
+537.404
+538.572
+539.806
+542.075
+542.276
+544.278
+545.479
+547.08
+548.248
+548.649
+548.749
+551.418
+551.752
+552.786
+554.655
+556.69
+557.291
+558.992
+562.996
+565.098
+575.676
+576.51
+579.046
+582.382
+582.649
+583.517
+583.617
+584.117
+585.285
+586.954
+587.454
+587.621
+588.121
+588.655
+588.722
+588.789
+588.989
+589.289
+589.456
+589.723
+590.457
+590.524
+590.791
+591.458
+591.859
+592.125
+592.793
+592.96
+595.128
+595.195
+595.295
+595.462
+595.629
+595.796
+595.963
+596.196
+596.63
+597.364
+597.631
+597.831
+598.532
+598.866
+599.466
+599.8
+599.967
+600.033
+600.133
+600.3
+600.367
+603.737
+604.137
+604.471
+604.805
+605.138
+612.813
+612.846
+613.146
+613.647
+613.747
+614.982
+615.182
+615.482
+615.816
+615.916
+615.983
+616.083
+616.483
+616.917
+617.017
+617.184
+617.351
+617.417
+617.751
+617.818
+617.985
+618.252
+618.418
+618.485
+618.652
+619.586
+621.722
+625.492
+628.161
+629.663
+631.865
+632.199
+635.435
+636.703
+638.605
+639.006
+639.173
+642.176
+642.209
+643.177
+645.345
+645.846
+646.346
+647.781
+647.881
+648.282
+648.382
+649.283
+649.349
+650.45
+650.517
+666.166
+</pre></details><details><summary>12 · The print includes Japanese intertitles and several rapid action cuts. I’m logging those alongside the action so the report distinguishes what the cards say fro</summary><pre>
+The print includes Japanese intertitles and several rapid action cuts. I’m logging those alongside the action so the report distinguishes what the cards say from what is visibly shown, particularly during the warning and bridge sequences.</pre></details><details><summary>13 · I’ve reviewed the film through the bridge’s formation and the monkey’s crossing. I’m checking the short shots at the end frame by frame to pin down the wolf’s e</summary><pre>
+I’ve reviewed the film through the bridge’s formation and the monkey’s crossing. I’m checking the short shots at the end frame by frame to pin down the wolf’s entry, the bridge’s release, and the fall.</pre></details><details><summary>14 · /usr/bin/bash -lc &#x27;ls /usr/bin/libreoffice /usr/bin/soffice /usr/bin/pdftoppm 2&gt;/dev/null
+fc-list :lang=ja family | head -10&#x27;</summary><pre>/usr/bin/bash -lc &#x27;ls /usr/bin/libreoffice /usr/bin/soffice /usr/bin/pdftoppm 2&gt;/dev/null
+fc-list :lang=ja family | head -10&#x27;
+/usr/bin/pdftoppm
+</pre></details><details><summary>15 · /usr/bin/bash -lc &#x27;cat /workspace/DEADLINE.json
+ls -la /candidate/input
+fc-list | head -15&#x27;</summary><pre>/usr/bin/bash -lc &#x27;cat /workspace/DEADLINE.json
+ls -la /candidate/input
+fc-list | head -15&#x27;
+{&quot;start_unix&quot;: 1794328975.1980824, &quot;deadline_unix&quot;: 1794336175.1980824, &quot;wall_clock_seconds&quot;: 7200, &quot;mode&quot;: &quot;official&quot;}total 42704
+drwxrwxrwx 1 1000 1000      512 Nov 10 03:24 .
+drwxrwxrwx 1 1000 1000      512 Nov 10 16:36 ..
+-rwxrwxrwx 1 1000 1000 43694574 Nov 10 03:24 Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv
+-rwxrwxrwx 1 1000 1000    31105 Nov 10 03:24 video_storyboard_qa_set.docx
+/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf: DejaVu Serif:style=Bold
+/usr/share/fonts/opentype/urw-base35/URWBookman-LightItalic.otf: URW Bookman:style=Light Italic
+/usr/share/fonts/opentype/urw-base35/URWBookman-Light.otf: URW Bookman:style=Light
+/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf: DejaVu Sans Mono:style=Book
+/usr/share/fonts/truetype/ubuntu/Ubuntu-Italic[wdth,wght].ttf: Ubuntu:style=Italic
+/usr/share/fonts/truetype/ubuntu/UbuntuSans-Italic[wdth,wght].ttf: Ubuntu Sans:style=SemiBold Italic
+/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Oblique.ttf: DejaVu Sans,DejaVu Sans Condensed:style=Condensed Oblique,Oblique
+/usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf: Ubuntu Sans:style=Thin
+/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Italic.otf: Nimbus Mono PS:style=Italic
+/usr/share/fonts/opentype/urw-base35/P052-Italic.otf: P052:style=Italic
+/usr/share/fonts/type1/urw-base35/URWGothic-BookOblique.t1: URW Gothic:style=Book Oblique
+/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-BoldItalic.ttf: DejaVu Serif,DejaVu Serif Condensed:style=Condensed Bold Italic,Bold Italic
+/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf: DejaVu Sans,DejaVu Sans Light:style=ExtraLight
+/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf: DejaVu Sans:style=Book
+/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf: Nimbus Sans:style=Regular
+</pre></details><details><summary>16 · /usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/detail.py &lt;&lt;&#x27;PY&#x27;
+from PIL import Image, ImageDraw, ImageFont
+import subprocess,sys,os
+start,end,rate=map(float,sys.a</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/detail.py &lt;&lt;&#x27;PY&#x27;
+from PIL import Image, ImageDraw, ImageFont
+import subprocess,sys,os
+start,end,rate=map(float,sys.argv[1:4])
+prefix=sys.argv[4] if len(sys.argv)&gt;4 else &#x27;detail&#x27;
+os.makedirs(f&#x27;/workspace/scratch/{prefix}&#x27;,exist_ok=True)
+subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-ss&#x27;,str(start),&#x27;-i&#x27;,&#x27;/candidate/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27;,&#x27;-t&#x27;,str(end-start),&#x27;-vf&#x27;,f&#x27;fps={rate}&#x27;,&#x27;-q:v&#x27;,&#x27;2&#x27;,f&#x27;/workspace/scratch/{prefix}/%04d.jpg&#x27;],check=True)
+files=sorted(__import__(&#x27;glob&#x27;).glob(f&#x27;/workspace/scratch/{prefix}/*.jpg&#x27;))
+f=ImageFont.truetype(&#x27;/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf&#x27;,18)
+for j in range(0,len(files),30):
+ chunk=files[j:j+30]
+ im=Image.new(&#x27;RGB&#x27;,(2000,324*((len(chunk)+4)//5)),&#x27;#eee&#x27;);d=ImageDraw.Draw(im)
+ for k,path in enumerate(chunk):
+  t=start+(j+k)/rate;x=k%5*400;y=k//5*324
+  im.paste(Image.open(path),(x,y+24));d.text((x+8,y+1),f&#x27;{int(t)//60:02d}:{t%60:05.2f}&#x27;,font=f,fill=&#x27;black&#x27;)
+ out=f&#x27;/workspace/scratch/sheets/{prefix}_{j//30}.jpg&#x27;;im.save(out,quality=93); print(out)
+PY
+python /workspace/scratch/detail.py 642 648 5 fall
+python /workspace/scratch/detail.py 464 472 4 monkey_intro
+python /workspace/scratch/detail.py 414 422 4 ladder
+python /workspace/scratch/detail.py 56 62 4 transform&quot;
+/workspace/scratch/sheets/fall_0.jpg
+/workspace/scratch/sheets/monkey_intro_0.jpg
+/workspace/scratch/sheets/monkey_intro_1.jpg
+/workspace/scratch/sheets/ladder_0.jpg
+/workspace/scratch/sheets/ladder_1.jpg
+/workspace/scratch/sheets/transform_0.jpg
+</pre></details><details><summary>17 · /usr/bin/bash -lc &#x27;python /workspace/scratch/detail.py 96 108 3 fruit
+python /workspace/scratch/detail.py 134 144 3 flight
+python /workspace/scratch/detail.py 4</summary><pre>/usr/bin/bash -lc &#x27;python /workspace/scratch/detail.py 96 108 3 fruit
+python /workspace/scratch/detail.py 134 144 3 flight
+python /workspace/scratch/detail.py 430 440 3 smoke
+python /workspace/scratch/detail.py 607 613 5 bridge&#x27;
+/workspace/scratch/sheets/fruit_0.jpg
+/workspace/scratch/sheets/fruit_1.jpg
+/workspace/scratch/sheets/flight_0.jpg
+/workspace/scratch/sheets/smoke_0.jpg
+/workspace/scratch/sheets/bridge_0.jpg
+</pre></details><details><summary>18 · The sequence checks are complete. I’m drafting the log in continuous time order, with approximate source timestamps and English summaries of the visible Japanes</summary><pre>
+The sequence checks are complete. I’m drafting the log in continuous time order, with approximate source timestamps and English summaries of the visible Japanese intertitles. The entries will record actions and scene details without question numbers, answer choices, or character judgments.</pre></details><details><summary>19 · /usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/build_log.py &lt;&lt;&#x27;PY&#x27;
+from docx import Document
+from docx.shared import Inches, Pt, RGBColor
+from docx.oxml import Oxm</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/build_log.py &lt;&lt;&#x27;PY&#x27;
+from docx import Document
+from docx.shared import Inches, Pt, RGBColor
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
+from pathlib import Path
+import json, re
+
+segments=[]
+def add(start,end,title,visual,text=&#x27;&#x27;):
+    segments.append(dict(id=f&#x27;S{len(segments)+1:02d}&#x27;,start=start,end=end,title=title,visual=visual,text=text))
+
+add(&#x27;00:00&#x27;,&#x27;00:06&#x27;,&#x27;Modern identification card&#x27;,
+    &#x27;White Japanese and English lettering on black, followed by black leader.&#x27;,
+    &#x27;Visible English: “A Wolf is a Wolf” and “(1931, Yasuji Murata, 11 min)”.&#x27;)
+add(&#x27;00:06&#x27;,&#x27;00:22&#x27;,&#x27;Original opening cards&#x27;,
+    &#x27;A framed Japanese production card fades in and out. An illustrated title shows a large black wolf above smaller animal silhouettes; a short Japanese animator credit follows. The boxed NFC mark appears at lower right and remains through most of the print.&#x27;,
+    &#x27;Japanese cards identify a production credit, the title A Wolf is a Wolf, and the animator Murata Yasuji.&#x27;)
+add(&#x27;00:22&#x27;,&#x27;00:29&#x27;,&#x27;Village establishing view&#x27;,
+    &#x27;Thatched roofs, a fence, and a spreading tree against a pale sky. Dissolve to a road outside a white-walled house with an open window, hedge, and bare tree.&#x27;)
+add(&#x27;00:29&#x27;,&#x27;00:45&#x27;,&#x27;Two animals outside the house&#x27;,
+    &#x27;A slender, horned goat faces a round-bellied raccoon dog with dark eye patches and a thick tail. They gesture and bow toward one another, then walk off left, the goat ahead.&#x27;)
+add(&#x27;00:45&#x27;,&#x27;01:10&#x27;,&#x27;Woodland walk and transformation&#x27;,
+    &#x27;The pair walk left among bare trunks. The raccoon dog leaps and changes into a bald-headed, dark-robed figure. The goat falls backward with stars around its head, then gets up. The figure changes back; the two gesture at one another. A circular iris isolates the raccoon dog.&#x27;)
+add(&#x27;01:10&#x27;,&#x27;01:15&#x27;,&#x27;Apology intertitle and iris return&#x27;,
+    &#x27;Japanese dialogue card on black, then the raccoon dog reappears in a circular iris.&#x27;,
+    &#x27;The speaker asks to be forgiven and says he will not frighten the other again.&#x27;)
+add(&#x27;01:15&#x27;,&#x27;01:30&#x27;,&#x27;Walking together again&#x27;,
+    &#x27;The goat approaches the raccoon dog from the right. They bow and gesture. The raccoon dog turns left and walks ahead, with the goat following through the trees.&#x27;)
+
+add(&#x27;01:30&#x27;,&#x27;01:47&#x27;,&#x27;Fruit tree&#x27;,
+    &#x27;Close view of round fruit on branches dissolves to the two animals below the trunk. The raccoon dog jumps against the tree and fruit falls around them. The goat kicks the trunk, sits down, and more fruit falls. Both collect fruit from the ground.&#x27;)
+add(&#x27;01:47&#x27;,&#x27;02:00&#x27;,&#x27;Wolf in the woods&#x27;,
+    &#x27;A black wolf with pointed ears, long muzzle, pale eyes, and a long tail emerges from behind trunks. It walks right on all fours across the woodland floor, passing behind foreground trees.&#x27;)
+add(&#x27;02:00&#x27;,&#x27;02:06&#x27;,&#x27;Eating beneath the tree&#x27;,
+    &#x27;The raccoon dog and goat sit on opposite sides of the trunk, bringing fruit to their mouths. Fruit, skins, and small pieces litter the ground.&#x27;)
+add(&#x27;02:06&#x27;,&#x27;02:14&#x27;,&#x27;Wolf reaches a rocky edge&#x27;,
+    &#x27;The wolf continues right through bare woodland to a projecting rock ledge. It stops, lifts its muzzle, then leans over the edge and looks downward.&#x27;)
+add(&#x27;02:14&#x27;,&#x27;02:23&#x27;,&#x27;Return to the fruit tree; flight&#x27;,
+    &#x27;The goat stands, drops backward, and stretches flat along the ground at the trunk. The wolf bounds in from the left. The raccoon dog jumps away to the right and runs through the trees; the wolf bends near the flattened goat, then runs after the raccoon dog.&#x27;)
+add(&#x27;02:23&#x27;,&#x27;02:37&#x27;,&#x27;Pursuit and curled animal&#x27;,
+    &#x27;The wolf runs right behind the raccoon dog. At a group of rocks the raccoon dog curls into a ball. The wolf stands upright, raises a hind leg, and kicks the ball away to the right.&#x27;)
+add(&#x27;02:37&#x27;,&#x27;02:50&#x27;,&#x27;Rolling down the slope&#x27;,
+    &#x27;The curled raccoon dog rolls down a sloping, rocky path, its face and tail rotating into view. It strikes a tree, with stars at the impact, then uncurls at the base. Cut back to the upright wolf gesturing beside the rocks.&#x27;)
+add(&#x27;02:50&#x27;,&#x27;03:00&#x27;,&#x27;Wolf passes the fruit tree&#x27;,
+    &#x27;The flattened goat remains beside the trunk amid fruit debris. The wolf enters from the right, bends down by the trunk, then passes to the left and leaves. The tree view fades to black.&#x27;)
+
+add(&#x27;03:00&#x27;,&#x27;03:08&#x27;,&#x27;Meeting announced&#x27;,
+    &#x27;A vertical Japanese intertitle appears on black.&#x27;,
+    &#x27;The card says that a village meeting was held that night to discuss measures against the violent wolf.&#x27;)
+add(&#x27;03:08&#x27;,&#x27;03:30&#x27;,&#x27;Animals seated indoors&#x27;,
+    &#x27;A hanging lamp lights animals seated in a circle on the floor. Closer views move across a floppy-eared dog, horned goats, a pig, and the round raccoon dog; several rest their heads on their hands. The raccoon dog straightens and stands.&#x27;)
+add(&#x27;03:30&#x27;,&#x27;03:41&#x27;,&#x27;Raccoon dog addresses the meeting&#x27;,
+    &#x27;After a dialogue card, the standing raccoon dog gestures broadly and raises both arms while the others remain seated. A second dialogue card follows.&#x27;,
+    &#x27;First card: he has a good idea and asks the others to leave it to him. Second card: he introduces a demonstration—doing it “like this”.&#x27;)
+add(&#x27;03:41&#x27;,&#x27;03:52&#x27;,&#x27;Transformation demonstration&#x27;,
+    &#x27;The raccoon dog changes into a tall, pale, octopus-like figure with a bulbous head and long tentacles. The goat beside it recoils onto all fours. The figure changes back to the round raccoon dog, followed by a dialogue card.&#x27;,
+    &#x27;The card says he will frighten the wolf in this way and then show the others the wolf captured alive.&#x27;)
+add(&#x27;03:52&#x27;,&#x27;04:01&#x27;,&#x27;Iris close and next-morning card&#x27;,
+    &#x27;A circular iris holds on the raccoon dog and closes to black. A short vertical Japanese time card fades in and out.&#x27;,
+    &#x27;Next morning.&#x27;)
+add(&#x27;04:01&#x27;,&#x27;04:10&#x27;,&#x27;Raccoon dog sets out&#x27;,
+    &#x27;Wearing a neck cloth, short trousers, and dark shoes, the raccoon dog marches through the bare forest. A wide view shows it continuing across open ground with distant hills.&#x27;)
+add(&#x27;04:10&#x27;,&#x27;04:30&#x27;,&#x27;Wolf on high rocks; approach below&#x27;,
+    &#x27;The wolf sits atop a jagged rock outcrop. Cuts alternate with the raccoon dog marching beneath steep mountain walls and appearing small on an open mountainside. The wolf rises, watches, and leaps off the outcrop; it then appears among large rock slabs.&#x27;)
+
+add(&#x27;04:30&#x27;,&#x27;04:45&#x27;,&#x27;Encounter among rock faces&#x27;,
+    &#x27;The raccoon dog continues along the cliff base, stops, and turns. The wolf appears beside a tall rock, followed by a close view of its pale eyes and exposed teeth. An iris close-up shows the raccoon dog facing toward it and gesturing.&#x27;)
+add(&#x27;04:45&#x27;,&#x27;04:47&#x27;,&#x27;Call to the wolf&#x27;,
+    &#x27;Large vertical Japanese lettering on black.&#x27;,
+    &#x27;“Hey, wolf&quot;&#x27;!”&#x27;&quot;&#x27;)
+add(&#x27;04:47&#x27;,&#x27;05:00&#x27;,&#x27;Successive transformations&#x27;,
+    &#x27;The raccoon dog changes into an upright, pale bear-shaped figure. Intercuts show the black wolf walking closer across the rocky ground. The bear-shaped figure changes back; the raccoon dog bends down and becomes the tall, tentacled figure seen at the meeting.&#x27;)
+add(&#x27;05:00&#x27;,&#x27;05:13&#x27;,&#x27;Wolf and tentacled figure&#x27;,
+    &#x27;The wolf walks past the tentacled figure, turns back, bares its teeth, and crouches. The figure bends its head down. A brief dialogue card interrupts; the wolf then leaps toward the figure.&#x27;,
+    &#x27;Brief card at about 05:11: “Oh no&quot;&#x27;!” / “I’ve made a mistake!”&#x27;&quot;&#x27;)
+add(&#x27;05:13&#x27;,&#x27;05:32&#x27;,&#x27;Return toward the village&#x27;,
+    &#x27;The raccoon dog is again in its round form and clothing, walking with head and shoulders lowered along the rocks and through the forest. Intercut views show a group of animals waiting by a bare tree. It enters their view from the left and approaches.&#x27;)
+add(&#x27;05:32&#x27;,&#x27;05:47&#x27;,&#x27;Facing the waiting group&#x27;,
+    &#x27;A circular close-up shows the dog and other waiting animals. Another iris isolates the raccoon dog from behind and in profile as it turns its head and gestures. In the wider view it bends low before the group; the image fades out.&#x27;)
+add(&#x27;05:47&#x27;,&#x27;06:06&#x27;,&#x27;Season card and mountain landscape&#x27;,
+    &#x27;A Japanese intertitle dissolves into a wide mountain valley with a few buildings. Successive dissolves cover the hills and valley with snow. The snowy view fades to black.&#x27;,
+    &#x27;Autumn has passed and winter has arrived.&#x27;)
+
+add(&#x27;06:06&#x27;,&#x27;06:23&#x27;,&#x27;Squirrel lookout above the courtyard&#x27;,
+    &#x27;A squirrel with a large bushy tail sits in a fork of a bare tree overlooking a building and an animal gathering. Rabbits hold hands and move in a circle, shown closer through a circular mask. The squirrel holds a telescope to its eye, lowers it, turns, and looks toward the mountains.&#x27;)
+add(&#x27;06:23&#x27;,&#x27;06:37&#x27;,&#x27;Circular view across snowy mountains&#x27;,
+    &#x27;Within the telescope-like circular field, the view moves over snowy peaks, gullies, and a track. Near the end, the dark wolf appears at the lower right, moving along the snowy slope. Cut back to the squirrel looking through the telescope.&#x27;)
+add(&#x27;06:37&#x27;,&#x27;06:44&#x27;,&#x27;Lookout descends and calls out&#x27;,
+    &#x27;The squirrel drops from the tree, lands, straightens, and opens its mouth. A Japanese warning card intervenes, then the squirrel leans forward again.&#x27;,
+    &#x27;“The wolf has come down the mountain&quot;&#x27;!”&#x27;&quot;&#x27;)
+add(&#x27;06:44&#x27;,&#x27;06:48&#x27;,&#x27;Animals scatter in the courtyard&#x27;,
+    &#x27;The rabbits break their linked circle and run, some tumbling. A wider view shows pigs, horned goats, and other animals hurrying across the open space in front of the building.&#x27;)
+add(&#x27;06:48&#x27;,&#x27;06:55&#x27;,&#x27;Wolf on snowy woodland slope&#x27;,
+    &#x27;The black wolf walks right on all fours at the foot of a snow-covered, wooded hillside. A trail of dark footprints remains behind it.&#x27;)
+add(&#x27;06:55&#x27;,&#x27;07:01&#x27;,&#x27;Squirrel climbs the house ladder&#x27;,
+    &#x27;Against a plain building wall, the bushy-tailed squirrel climbs a fixed vertical wooden ladder using its forepaws and feet. It reaches a projecting rung/platform beneath a small suspended alarm fixture and repeatedly reaches upward to operate it.&#x27;)
+add(&#x27;07:01&#x27;,&#x27;07:12&#x27;,&#x27;Warning spreads among houses&#x27;,
+    &#x27;Two round animals hurry past thatched houses, raising their arms toward windows and doors; goats and other animals join the movement along the street. A brief return shot shows the squirrel still at the top of the wall-mounted ladder, working the alarm fixture.&#x27;)
+
+add(&#x27;07:12&#x27;,&#x27;07:20&#x27;,&#x27;Interior scramble and doorway&#x27;,
+    &#x27;Inside a house, a pig jumps beside a square recessed hearth in a raised floor. A large smoke-like cloud billows up; the pig tumbles off the platform, gets up, and runs outside. In a separate dark lane, a small dark, pointed-eared animal runs into a doorway.&#x27;)
+add(&#x27;07:20&#x27;,&#x27;07:30&#x27;,&#x27;Houses and a barrel&#x27;,
+    &#x27;A rabbit and a pig hurry along house fronts and turn toward entrances. The pig moves into a narrow lane, approaches an open barrel beside leaning boards, and jumps into it, leaving its upper body above the rim.&#x27;)
+add(&#x27;07:30&#x27;,&#x27;07:35&#x27;,&#x27;Wolf continues through the woods&#x27;,
+    &#x27;The wolf walks right between bare trunks across pale ground, its long muzzle forward and tail trailing.&#x27;)
+add(&#x27;07:35&#x27;,&#x27;07:41&#x27;,&#x27;Barrel overturned&#x27;,
+    &#x27;The pig remains in the barrel. Three smaller pigs approach; the barrel tips over. The large pig gets out beside it with dark liquid coating its head and upper body.&#x27;)
+add(&#x27;07:41&#x27;,&#x27;07:52&#x27;,&#x27;Rabbit and dark monkey silhouette&#x27;,
+    &#x27;A rabbit runs across open ground and stops beside a house. At about 07:47 a black, shadow-like silhouette of a long-tailed monkey drops into view beside it and tumbles low. The monkey rises, faces the rabbit, and gestures; pale facial details show against its dark body.&#x27;)
+add(&#x27;07:52&#x27;,&#x27;08:03&#x27;,&#x27;Monkey and rabbit travel together&#x27;,
+    &#x27;The monkey moves left with the rabbit immediately behind it across a bare landscape. After a brief view of villagers disappearing into a house, the pair continue along the village street.&#x27;)
+add(&#x27;08:03&#x27;,&#x27;08:16&#x27;,&#x27;At a closed house door&#x27;,
+    &#x27;The rabbit and monkey stop at a plank door beneath a thatched roof. The rabbit knocks or pushes at the door. A horned goat opens it; the rabbit enters, followed by the monkey, and the door closes.&#x27;)
+
+add(&#x27;08:16&#x27;,&#x27;08:26&#x27;,&#x27;Conversation inside the house&#x27;,
+    &#x27;The goat sits on the edge of a raised room while the rabbit and dark monkey stand below. Sliding panels with landscape designs, a round hanging object, hanging strips, and stacked boards are visible. An iris close-up isolates the monkey, which folds its arms and then puts its hands at its waist.&#x27;)
+add(&#x27;08:26&#x27;,&#x27;08:32&#x27;,&#x27;Monkey’s dialogue card&#x27;,
+    &#x27;Vertical Japanese dialogue on black, followed by the monkey in the circular close-up.&#x27;,
+    &#x27;The speaker says he has an idea and asks that everything be left to him.&#x27;)
+add(&#x27;08:32&#x27;,&#x27;08:44&#x27;,&#x27;Monkey leaves the house&#x27;,
+    &#x27;The goat gets up; all three gesture. Outside, the monkey comes through the doorway first. The goat and rabbit follow to the threshold and wave as the monkey gestures back, then walks right. Fade to black and into rocks.&#x27;)
+add(&#x27;08:44&#x27;,&#x27;08:54&#x27;,&#x27;Monkeys at the cliff base&#x27;,
+    &#x27;A dark monkey enters among angular boulders below a steep rock face and climbs onto a stone. Another approaches from the right. They look and gesture upward; additional dark figures are visible among the rocks.&#x27;)
+add(&#x27;08:54&#x27;,&#x27;09:07&#x27;,&#x27;Wolf above the chasm&#x27;,
+    &#x27;The wolf reaches a high projecting cliff beside a bare tree and looks across. A reverse wide view shows several small pale animals, including horned goats, on the opposite rocky rim. Back at the wolf, the view tilts down the sheer cliff to a monkey below.&#x27;)
+add(&#x27;09:07&#x27;,&#x27;09:15&#x27;,&#x27;Monkey climbs to the wolf&#x27;,
+    &#x27;The monkey bounds upward over rocks, with another monkey below. It reaches the lip beside the tree where the wolf waits. In a circular close-up it grips the edge with one hand and lifts the other in greeting.&#x27;)
+add(&#x27;09:15&#x27;,&#x27;09:25&#x27;,&#x27;Greeting and wolf’s response&#x27;,
+    &#x27;A greeting card is followed by an iris close-up of the wolf leaning forward with its teeth showing. A second dialogue card appears; the monkey is then shown hanging at the edge and raising one hand.&#x27;,
+    &#x27;First card: “Hello, General Wolf&quot;&#x27;!” Second card: the wolf remarks that a monkey has arrived at a convenient moment and orders it not to move.&#x27;&quot;&#x27;)
+
+add(&#x27;09:25&#x27;,&#x27;09:42&#x27;,&#x27;Offer to take the wolf across&#x27;,
+    &#x27;A longer Japanese dialogue card is followed by close-ups of the monkey and wolf, then a short reply card.&#x27;,
+    &#x27;The monkey’s card calls him the wolf’s subject and says the monkeys have come to take the wolf across to where the goats are. The reply tells him to lead the way immediately.&#x27;)
+add(&#x27;09:42&#x27;,&#x27;09:55&#x27;,&#x27;Monkeys summoned upward&#x27;,
+    &#x27;The wolf stands upright beside the tree. The monkey pulls itself onto the ledge and signals downward and upward with its arms. Many monkeys gather among the boulders below, climb the cliff, reach the ledge, and begin ascending the tree while the wolf watches.&#x27;)
+add(&#x27;09:55&#x27;,&#x27;10:05&#x27;,&#x27;Linked monkeys up cliff and tree&#x27;,
+    &#x27;Alternating views show monkeys stretched in a line up the rock face and clustered along the tree trunk. Circular close views show successive monkeys climbing past and joining the others, their bodies linked end to end.&#x27;)
+add(&#x27;10:05&#x27;,&#x27;10:13&#x27;,&#x27;Living bridge lowered across the gap&#x27;,
+    &#x27;Wide view: two sheer rock cliffs are separated by a deep, open ravine. A long chain of linked monkeys extends along a branch on the left. Its free end swings down and reaches the right cliff; the left end lowers along the tree. The joined bodies hang in a shallow curve across the gap, forming a living bridge.&#x27;)
+add(&#x27;10:13&#x27;,&#x27;10:20&#x27;,&#x27;Monkey steps onto the living bridge&#x27;,
+    &#x27;With the wolf still beside the tree on the left ledge, the single monkey gestures, steps onto the linked bodies, and walks right across them. Mid-span it stops, bends down, and addresses a monkey in the chain.&#x27;)
+add(&#x27;10:20&#x27;,&#x27;10:22&#x27;,&#x27;Instruction on the bridge&#x27;,
+    &#x27;Short vertical Japanese dialogue card on black.&#x27;,
+    &#x27;The speaker urges the others to hold firm / says he is counting on them.&#x27;)
+add(&#x27;10:22&#x27;,&#x27;10:28&#x27;,&#x27;Monkey completes the crossing&#x27;,
+    &#x27;The monkey straightens and continues right along the chain. It steps onto the far rock ledge, turns back toward the wolf, and extends an arm in a beckoning gesture. The linked monkeys remain stretched between the cliffs.&#x27;)
+
+add(&#x27;10:28&#x27;,&#x27;10:32&#x27;,&#x27;Wolf follows onto the bridge&#x27;,
+    &#x27;Cut to the wolf still at the tree-side cliff. It rises on its hind legs, approaches the edge, and steps from the rock onto the chain of monkeys, proceeding right in the direction the monkey has just taken.&#x27;)
+add(&#x27;10:32&#x27;,&#x27;10:42&#x27;,&#x27;Wolf over the ravine&#x27;,
+    &#x27;The wolf walks upright along the linked bodies, then bends and crouches on them. A downward-looking insert shows a rocky slope and boulders far below. Back on the bridge, pale concentric circles surround the hunched wolf as it looks down and clings close to the chain.&#x27;)
+add(&#x27;10:42&#x27;,&#x27;10:45&#x27;,&#x27;Signal from the far ledge&#x27;,
+    &#x27;The monkey on the right cliff gestures toward the bridge, crouches, and then raises both arms overhead. The monkey anchoring that end remains at the edge; monkeys along the chain begin raising their limbs.&#x27;)
+add(&#x27;10:45&#x27;,&#x27;10:48&#x27;,&#x27;Chain parts; wolf falls&#x27;,
+    &#x27;Back at mid-span, the linked bodies separate beneath the wolf. In the wide ravine view, the two ends swing down beside the cliffs while the wolf drops through the open center, limbs spread. It falls out of the lower frame; a pale burst rises from below. The wolf is not shown returning to either ledge.&#x27;)
+add(&#x27;10:48&#x27;,&#x27;10:53&#x27;,&#x27;Animals at the rim&#x27;,
+    &#x27;A row of rabbits, horned goats, and round-faced animals peers over a rocky edge, then raises forelegs and bobs up and down. The view fades to black.&#x27;)
+add(&#x27;10:53&#x27;,&#x27;11:02&#x27;,&#x27;Closing narrative card&#x27;,
+    &#x27;Vertical Japanese intertitle fades in and out on black.&#x27;,
+    &#x27;The card says that happy days returned once more to the village at the foot of the mountain.&#x27;)
+add(&#x27;11:02&#x27;,&#x27;11:16.22&#x27;,&#x27;End title, black, and modern closing credit&#x27;,
+    &#x27;The original Japanese title and an end character appear, followed by black from about 11:06 to 11:10. A modern bilingual credit fades in and remains to the end of the file.&#x27;,
+    &#x27;Original card: A Wolf is a Wolf / End. The English closing credit identifies the National Project for the Sustainability of Born-Digital Cinema, support by Japan’s Agency for Cultural Affairs in fiscal 2016, January 2017, and the National Film Center, The Museum of Modern Art, Tokyo.&#x27;)
+
+Path(&#x27;/workspace/scratch/log_segments.json&#x27;).write_text(json.dumps(segments,ensure_ascii=False,indent=2))
+
+# Readable fixed page groups, with each continuity segment kept together.
+doc=Document()
+sec=doc.sections[0]
+sec.page_width=Inches(8.27); sec.page_height=Inches(11.69)
+sec.top_margin=Inches(.62); sec.bottom_margin=Inches(.62)
+sec.left_margin=Inches(.65); sec.right_margin=Inches(.65)
+sec.header_distance=Inches(.25); sec.footer_distance=Inches(.25)
+normal=doc.styles[&#x27;Normal&#x27;]
+normal.font.name=&#x27;Calibri&#x27;; normal.font.size=Pt(10.5)
+normal.paragraph_format.space_after=Pt(3)
+normal.paragraph_format.line_spacing=1.03
+for name in [&#x27;Title&#x27;,&#x27;Subtitle&#x27;,&#x27;Heading 1&#x27;,&#x27;Heading 2&#x27;]:
+    doc.styles[name].font.name=&#x27;Calibri&#x27;
+header=sec.header.paragraphs[0]
+header.text=&#x27;ARCHIVAL SHOT LOG  /  A WOLF IS A WOLF&#x27;
+header.runs[0].font.size=Pt(8)
+header.runs[0].font.color.rgb=RGBColor.from_string(&#x27;526171&#x27;)
+footer=sec.footer.paragraphs[0]; footer.alignment=WD_ALIGN_PARAGRAPH.RIGHT
+r=footer.add_run(&#x27;Source elapsed time  •  &#x27;);r.font.size=Pt(8)
+fld=OxmlElement(&#x27;w:fldSimple&#x27;);fld.set(qn(&#x27;w:instr&#x27;),&#x27;PAGE&#x27;);footer._p.append(fld)
+
+p=doc.add_paragraph();p.paragraph_format.space_after=Pt(2)
+r=p.add_run(&#x27;Archival shot log&#x27;);r.bold=True;r.font.size=Pt(23);r.font.color.rgb=RGBColor.from_string(&#x27;243747&#x27;)
+p=doc.add_paragraph(&#x27;A Wolf is a Wolf (1931)  |  Source-print continuity report&#x27;)
+p.paragraph_format.space_after=Pt(8);p.runs[0].font.size=Pt(12)
+p=doc.add_paragraph()
+r=p.add_run(&#x27;Source: &#x27;);r.bold=True
+p.add_run(&#x27;Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv&#x27;)
+for r in p.runs:r.font.size=Pt(9)
+p=doc.add_paragraph(&#x27;Coverage: 00:00–11:16.22, including opening and closing cards. Times are elapsed from the first source frame, rounded to the nearest second except the file end. Adjacent shots may be grouped into continuity segments; ranges are contiguous, not frame-accurate edit points.&#x27;)
+for r in p.runs:r.font.size=Pt(9)
+p=doc.add_paragraph(&#x27;Records describe visible action. “Text — English sense” summarizes Japanese intertitles; quoted English on the modern cards is identified separately. Dialogue claims remain attributed to the cards. The round, masked-faced animal is called the raccoon dog for continuity.&#x27;)
+p.paragraph_format.space_after=Pt(9)
+for r in p.runs:r.font.size=Pt(9)
+
+page_groups=[segments[:7],segments[7:15],segments[15:22],segments[22:29],segments[29:36],segments[36:43],segments[43:50],segments[50:57],segments[57:]]
+
+for pg,group in enumerate(page_groups):
+    if pg:
+        doc.add_page_break()
+        p=doc.add_paragraph()
+        p.paragraph_format.space_after=Pt(7)
+        r=p.add_run(f&#x27;{group[0][\&quot;start\&quot;]}–{group[-1][\&quot;end\&quot;]}  |  Continuity segments&#x27;)
+        r.bold=True;r.font.size=Pt(13);r.font.color.rgb=RGBColor.from_string(&#x27;243747&#x27;)
+    table=doc.add_table(rows=1,cols=2)
+    table.alignment=WD_TABLE_ALIGNMENT.CENTER
+    table.autofit=False
+    table.columns[0].width=Inches(1.02)
+    table.columns[1].width=Inches(5.95)
+    table.rows[0].cells[0].text=&#x27;ID / SOURCE TIME&#x27;
+    table.rows[0].cells[1].text=&#x27;VISUAL RECORD / ACTION / ON-SCREEN TEXT&#x27;
+    repeat=OxmlElement(&#x27;w:tblHeader&#x27;);table.rows[0]._tr.get_or_add_trPr().append(repeat)
+    for cell in table.rows[0].cells:
+        shd=OxmlElement(&#x27;w:shd&#x27;);shd.set(qn(&#x27;w:fill&#x27;),&#x27;243747&#x27;);cell._tc.get_or_add_tcPr().append(shd)
+        for r in cell.paragraphs[0].runs:
+            r.bold=True;r.font.size=Pt(8);r.font.color.rgb=RGBColor(255,255,255)
+    for s in group:
+        cells=table.add_row().cells
+        cells[0].width=Inches(1.02);cells[1].width=Inches(5.95)
+        p=cells[0].paragraphs[0]
+        r=p.add_run(s[&#x27;id&#x27;]);r.bold=True;r.font.size=Pt(11);r.font.color.rgb=RGBColor.from_string(&#x27;243747&#x27;)
+        p=cells[0].add_paragraph(s[&#x27;start&#x27;]+&#x27;\\n&#x27;+s[&#x27;end&#x27;])
+        p.paragraph_format.space_after=Pt(0)
+        for r in p.runs:r.font.size=Pt(9)
+        p=cells[1].paragraphs[0]
+        r=p.add_run(s[&#x27;title&#x27;]);r.bold=True
+        p.paragraph_format.space_after=Pt(2)
+        p=cells[1].add_paragraph(s[&#x27;visual&#x27;])
+        p.paragraph_format.space_after=Pt(2 if s[&#x27;text&#x27;] else 0)
+        if s[&#x27;text&#x27;]:
+            p=cells[1].add_paragraph()
+            is_modern=s[&#x27;id&#x27;] in [&#x27;S01&#x27;]
+            label=&#x27;Text — &#x27; if is_modern else &#x27;Text — English sense: &#x27;
+            r=p.add_run(label);r.italic=True;r.font.color.rgb=RGBColor.from_string(&#x27;45545F&#x27;)
+            p.add_run(s[&#x27;text&#x27;])
+            p.paragraph_format.space_after=Pt(0)
+            for r in p.runs:r.font.size=Pt(9.5)
+        for cell in cells:
+            cell.vertical_alignment=WD_CELL_VERTICAL_ALIGNMENT.TOP
+            tcPr=cell._tc.get_or_add_tcPr()
+            mar=OxmlElement(&#x27;w:tcMar&#x27;)
+            for side,val in [(&#x27;top&#x27;,85),(&#x27;bottom&#x27;,85),(&#x27;left&#x27;,100),(&#x27;right&#x27;,100)]:
+                e=OxmlElement(&#x27;w:&#x27;+side);e.set(qn(&#x27;w:w&#x27;),str(val));e.set(qn(&#x27;w:type&#x27;),&#x27;dxa&#x27;);mar.append(e)
+            tcPr.append(mar)
+            borders=OxmlElement(&#x27;w:tcBorders&#x27;);bottom=OxmlElement(&#x27;w:bottom&#x27;);bottom.set(qn(&#x27;w:val&#x27;),&#x27;single&#x27;);bottom.set(qn(&#x27;w:sz&#x27;),&#x27;4&#x27;);bottom.set(qn(&#x27;w:color&#x27;),&#x27;D6DEE4&#x27;);borders.append(bottom);tcPr.append(borders)
+            for p in cell.paragraphs:
+                p.paragraph_format.keep_together=True
+                p.paragraph_format.widow_control=True
+        no_split=OxmlElement(&#x27;w:cantSplit&#x27;);cells[0]._tc.getparent().get_or_add_trPr().append(no_split)
+    # No extra paragraph text after the table; a normal page break follows.
+
+props=doc.core_properties
+props.title=&#x27;A Wolf is a Wolf — Archival shot log / continuity report&#x27;
+props.subject=&#x27;Temporal visual record of the supplied source print&#x27;
+props.author=&#x27;Archival assistant editor&#x27;
+props.keywords=&#x27;shot log, continuity report, source print&#x27;
+props.comments=&#x27;Prepared locally with Python and python-docx from the supplied OGV and QC brief.&#x27;
+output=Path(&#x27;/workspace/submission/storyboard.docx&#x27;)
+doc.save(output)
+print(&#x27;Segments:&#x27;,len(segments))
+print(&#x27;Words:&#x27;,sum(len((s[&#x27;title&#x27;]+&#x27; &#x27;+s[&#x27;visual&#x27;]+&#x27; &#x27;+s[&#x27;text&#x27;]).split()) for s in segments))
+print(&#x27;Page groups:&#x27;,[(g[0][&#x27;id&#x27;],g[-1][&#x27;id&#x27;],sum(len((s[&#x27;title&#x27;]+&#x27; &#x27;+s[&#x27;visual&#x27;]+&#x27; &#x27;+s[&#x27;text&#x27;]).split()) for s in g)) for g in page_groups])
+print(&#x27;Saved:&#x27;,output,output.stat().st_size)
+PY
+python /workspace/scratch/build_log.py&quot;
+Segments: 64
+Words: 2721
+Page groups: [(&#x27;S01&#x27;, &#x27;S07&#x27;, 273), (&#x27;S08&#x27;, &#x27;S15&#x27;, 318), (&#x27;S16&#x27;, &#x27;S22&#x27;, 296), (&#x27;S23&#x27;, &#x27;S29&#x27;, 284), (&#x27;S30&#x27;, &#x27;S36&#x27;, 290), (&#x27;S37&#x27;, &#x27;S43&#x27;, 275), (&#x27;S44&#x27;, &#x27;S50&#x27;, 328), (&#x27;S51&#x27;, &#x27;S57&#x27;, 321), (&#x27;S58&#x27;, &#x27;S64&#x27;, 336)]
+Saved: /workspace/submission/storyboard.docx 47668
+</pre></details><details><summary>20 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+from docx import Document
+from lxml import etree
+from zipfile import ZipFile
+from PIL import ImageFo</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+from docx import Document
+from lxml import etree
+from zipfile import ZipFile
+from PIL import ImageFont
+import json,re
+p=Path(&#x27;/workspace/submission/storyboard.docx&#x27;)
+d=Document(p)
+s=json.loads(Path(&#x27;/workspace/scratch/log_segments.json&#x27;).read_text())
+def sec(t):
+ m,z=t.split(&#x27;:&#x27;);return int(m)*60+float(z)
+assert len(s)==64
+assert sec(s[0][&#x27;start&#x27;])==0
+assert abs(sec(s[-1][&#x27;end&#x27;])-676.22)&lt;.001
+for a,b in zip(s,s[1:]): assert a[&#x27;end&#x27;]==b[&#x27;start&#x27;],(a,b)
+for x in s: assert sec(x[&#x27;end&#x27;])&gt;sec(x[&#x27;start&#x27;])
+assert len(d.tables)==9
+rows=[r for t in d.tables for r in t.rows[1:]]
+assert len(rows)==64
+for x,row in zip(s,rows):
+ assert x[&#x27;id&#x27;] in row.cells[0].text
+ assert x[&#x27;start&#x27;] in row.cells[0].text and x[&#x27;end&#x27;] in row.cells[0].text
+ assert x[&#x27;visual&#x27;] in row.cells[1].text
+with ZipFile(p) as z:
+ assert z.testzip() is None
+ for name in z.namelist():
+  if name.endswith(&#x27;.xml&#x27;):etree.fromstring(z.read(name))
+print(&#x27;PASS: DOCX opens with python-docx; ZIP and all XML parts are valid.&#x27;)
+print(&#x27;PASS: 64 uniquely ordered segments, continuous 00:00–11:16.22 coverage.&#x27;)
+print(&#x27;PASS: Every row includes its ID, start, end and visual description.&#x27;)
+# Conservative text-wrap height estimate in points, using a locally available wider font.
+fonts={10.5:ImageFont.truetype(&#x27;/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf&#x27;,105),9.5:ImageFont.truetype(&#x27;/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf&#x27;,95)}
+def lines(text,size):
+ f=fonts[size];width=(5.95*72-10)*10
+ lines=1;line=&#x27;&#x27;
+ for w in text.split():
+  cand=(line+&#x27; &#x27;+w).strip()
+  if f.getlength(cand)&gt;width and line:lines+=1;line=w
+  else:line=cand
+ return lines
+for i,t in enumerate(d.tables,1):
+ total=25
+ for row in t.rows[1:]:
+  ps=row.cells[1].paragraphs
+  total+=8.5
+  for j,p in enumerate(ps):
+   size=9.5 if j==2 else 10.5
+   total+=lines(p.text,size)*size*1.15+3
+ intro=150 if i==1 else 30
+ print(f&#x27;Page group {i}: estimated {total+intro:.0f} pt of {10.45*72:.0f} pt available&#x27;)
+print(&#x27;File bytes:&#x27;,p.stat().st_size)
+PY&quot;
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 51, in &lt;module&gt;
+AttributeError: &#x27;Paragraph&#x27; object has no attribute &#x27;stat&#x27;
+PASS: DOCX opens with python-docx; ZIP and all XML parts are valid.
+PASS: 64 uniquely ordered segments, continuous 00:00–11:16.22 coverage.
+PASS: Every row includes its ID, start, end and visual description.
+Page group 1: estimated 654 pt of 752 pt available
+Page group 2: estimated 557 pt of 752 pt available
+Page group 3: estimated 559 pt of 752 pt available
+Page group 4: estimated 548 pt of 752 pt available
+Page group 5: estimated 533 pt of 752 pt available
+Page group 6: estimated 507 pt of 752 pt available
+Page group 7: estimated 556 pt of 752 pt available
+Page group 8: estimated 543 pt of 752 pt available
+Page group 9: estimated 554 pt of 752 pt available
+</pre></details><details><summary>21 · The draft contains 64 continuity segments covering the full print, including the opening and closing cards. I’m checking the Word file’s structure, uninterrupte</summary><pre>
+The draft contains 64 continuity segments covering the full print, including the opening and closing cards. I’m checking the Word file’s structure, uninterrupted time ranges, and page layout before saving the final deliverable.</pre></details><details><summary>22 · /usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+p=&#x27;/workspace/scratch/build_log.py&#x27;
+s=open(p).read().replace(\&quot;table.rows[0].cells[0].text=&#x27;ID / SOURCE TIME&#x27;\&quot;, \&quot;table.rows</summary><pre>/usr/bin/bash -lc &quot;python - &lt;&lt;&#x27;PY&#x27;
+p=&#x27;/workspace/scratch/build_log.py&#x27;
+s=open(p).read().replace(\&quot;table.rows[0].cells[0].text=&#x27;ID / SOURCE TIME&#x27;\&quot;, \&quot;table.rows[0].cells[0].text=&#x27;SEGMENT\\\\nSTART / END&#x27;\&quot;)
+s=s.replace(\&quot;s[&#x27;start&#x27;]+&#x27;\\\\n&#x27;+s[&#x27;end&#x27;]\&quot;, \&quot;s[&#x27;start&#x27;]+&#x27;\\\\n– &#x27;+s[&#x27;end&#x27;]\&quot;)
+open(p,&#x27;w&#x27;).write(s)
+PY
+python /workspace/scratch/build_log.py
+python - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+from docx import Document
+from zipfile import ZipFile
+from lxml import etree
+import json
+path=Path(&#x27;/workspace/submission/storyboard.docx&#x27;)
+doc=Document(path)
+data=json.loads(Path(&#x27;/workspace/scratch/log_segments.json&#x27;).read_text())
+rows=[row for table in doc.tables for row in table.rows[1:]]
+assert len(rows)==len(data)==64
+assert data[0][&#x27;start&#x27;]==&#x27;00:00&#x27; and data[-1][&#x27;end&#x27;]==&#x27;11:16.22&#x27;
+for i,entry in enumerate(data):
+ assert entry[&#x27;id&#x27;]==f&#x27;S{i+1:02d}&#x27;
+ assert entry[&#x27;start&#x27;] in rows[i].cells[0].text
+ assert entry[&#x27;end&#x27;] in rows[i].cells[0].text
+ assert entry[&#x27;visual&#x27;] in rows[i].cells[1].text
+ if i: assert data[i-1][&#x27;end&#x27;]==entry[&#x27;start&#x27;]
+with ZipFile(path) as archive:
+ assert archive.testzip() is None
+ for name in archive.namelist():
+  if name.endswith(&#x27;.xml&#x27;): etree.fromstring(archive.read(name))
+print(&#x27;PASS: valid DOCX archive and XML; readable with python-docx.&#x27;)
+print(&#x27;PASS: all 64 segment IDs, time ranges, and descriptions; no temporal gaps.&#x27;)
+print(&#x27;Final file:&#x27;,path,&#x27;—&#x27;,path.stat().st_size,&#x27;bytes&#x27;)
+print(&#x27;Submission contents:&#x27;,[p.name for p in path.parent.iterdir()])
+PY&quot;
+Segments: 64
+Words: 2721
+Page groups: [(&#x27;S01&#x27;, &#x27;S07&#x27;, 273), (&#x27;S08&#x27;, &#x27;S15&#x27;, 318), (&#x27;S16&#x27;, &#x27;S22&#x27;, 296), (&#x27;S23&#x27;, &#x27;S29&#x27;, 284), (&#x27;S30&#x27;, &#x27;S36&#x27;, 290), (&#x27;S37&#x27;, &#x27;S43&#x27;, 275), (&#x27;S44&#x27;, &#x27;S50&#x27;, 328), (&#x27;S51&#x27;, &#x27;S57&#x27;, 321), (&#x27;S58&#x27;, &#x27;S64&#x27;, 336)]
+Saved: /workspace/submission/storyboard.docx 47682
+PASS: valid DOCX archive and XML; readable with python-docx.
+PASS: all 64 segment IDs, time ranges, and descriptions; no temporal gaps.
+Final file: /workspace/submission/storyboard.docx — 47682 bytes
+Submission contents: [&#x27;storyboard.docx&#x27;]
+</pre></details><details><summary>23 · Created [storyboard.docx](/workspace/submission/storyboard.docx) with 64 timed segments covering the full film. DOCX validity and timeline continuity checks pas</summary><pre>
+Created [storyboard.docx](/workspace/submission/storyboard.docx) with 64 timed segments covering the full film. DOCX validity and timeline continuity checks passed.
+
+Produced using python-docx. After Effects was not used; the AE software requirement is unmet.</pre></details>

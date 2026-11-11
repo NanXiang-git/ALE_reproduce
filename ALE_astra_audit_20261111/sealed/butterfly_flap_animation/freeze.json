@@ -1,0 +1,30 @@
+{
+  "case": "butterfly_flap_animation",
+  "source_case": "butterfly_flap_animation",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1794329993.04423,
+  "host_end_unix": 1794330313.007741,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "butterfly_flap_animation",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1794330313.2978258,
+    "elapsed_seconds": 319.6627275943756
+  },
+  "input_unchanged": true,
+  "provider_configuration_verified": true,
+  "submission_manifest": [
+    {
+      "path": "output.mp4",
+      "bytes": 1419969,
+      "sha256": "ad052dd43fc41d592365757ee28ca22c3e8922732691900bb31c773acf7bc385"
+    }
+  ],
+  "submission_manifest_sha256": "cbbd3e386d3cd8d0f27cf877b51bdc5a673c6d6b6a553aaa796e7280023b66a1",
+  "elapsed_solver_environment_seconds": 319.6627275943756,
+  "timed_out": false
+}

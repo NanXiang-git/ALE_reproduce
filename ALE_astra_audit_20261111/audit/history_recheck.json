@@ -1,0 +1,101 @@
+{
+  "video_storyboard_001": {
+    "counts": {
+      "userMessage": 1,
+      "agentMessage": 5,
+      "commandExecution": 15,
+      "reasoning": 18,
+      "imageView": 32,
+      "fileChange": 1
+    },
+    "command_count": 15,
+    "image_count": 32,
+    "command_pattern_flags": [
+      {
+        "id": "exec-e2858d1e-bc36-454a-8270-7e83b25e8e7d",
+        "matches": [
+          "http://"
+        ]
+      },
+      {
+        "id": "exec-960b6973-2bee-4ca8-b798-1e978c60b30b",
+        "matches": [
+          "http://",
+          "http://",
+          "http://",
+          "http://",
+          "http://",
+          "http://",
+          "http://",
+          "http://",
+          "http://"
+        ]
+      },
+      {
+        "id": "exec-f3667e2b-731a-4fe3-af20-bba3bc385ea5",
+        "matches": [
+          "http://"
+        ]
+      }
+    ],
+    "image_paths": [
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_00.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_01.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_02.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_03.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_04.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_05.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_06.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheet_07.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_00.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_01.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_02.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_03.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_04.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_05.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_06.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_07.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_08.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_09.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_10.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_11.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_12.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_13.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_14.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_15.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_16.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_17.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_18.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_19.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_20.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense_21.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\detail.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\cards.jpg"
+    ],
+    "incomplete": false
+  },
+  "butterfly_flap_animation": {
+    "counts": {
+      "userMessage": 1,
+      "agentMessage": 4,
+      "commandExecution": 9,
+      "imageView": 7,
+      "reasoning": 9
+    },
+    "command_count": 9,
+    "image_count": 7,
+    "command_pattern_flags": [],
+    "image_paths": [
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\input\\butterfly.jpeg",
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\preview_000.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\preview_018.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\preview_036.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\preview_072.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\preview_018.jpg",
+      "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\contact_sheet.jpg"
+    ],
+    "incomplete": false
+  },
+  "manual_pattern_resolution": "All three storyboard HTTP flags are inert OpenXML namespace literals in XML parsing/writing code, not network fetches. No suspicious match in butterfly commands.",
+  "limits": "Action logs are complete according to exporter but are not kernel-level old-run access proof."
+}

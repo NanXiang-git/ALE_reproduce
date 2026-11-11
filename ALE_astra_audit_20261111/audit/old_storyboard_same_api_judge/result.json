@@ -1,0 +1,64 @@
+{
+  "score": 1.0,
+  "correct_count": 10,
+  "total_questions": 10,
+  "answers": {
+    "Q1": "B",
+    "Q2": "A",
+    "Q3": "C",
+    "Q4": "B",
+    "Q5": "A",
+    "Q6": "C",
+    "Q7": "C",
+    "Q8": "C",
+    "Q9": "B",
+    "Q10": "D"
+  },
+  "correct": {
+    "Q1": true,
+    "Q2": true,
+    "Q3": true,
+    "Q4": true,
+    "Q5": true,
+    "Q6": true,
+    "Q7": true,
+    "Q8": true,
+    "Q9": true,
+    "Q10": true
+  },
+  "raw_judge_payload": {
+    "answers": {
+      "Q1": "B",
+      "Q2": "A",
+      "Q3": "C",
+      "Q4": "B",
+      "Q5": "A",
+      "Q6": "C",
+      "Q7": "C",
+      "Q8": "C",
+      "Q9": "B",
+      "Q10": "D"
+    },
+    "evidence": {
+      "Q1": "a village meeting about measures against the wolf",
+      "Q2": "The lead monkey stands on the right cliff above the bridge end. It turns toward the span and raises both arms high.",
+      "Q3": "The bushy-tailed squirrel climbs a vertical wooden ladder fixed against a house wall.",
+      "Q4": "A dark, shadow-like monkey silhouette with a curled tail appears next to it.",
+      "Q5": "the wolf walking right over snow at the foot of a wooded, rocky hillside",
+      "Q6": "two sheer cliff edges separated by a deep open ravine",
+      "Q7": "The long chain of monkeys ... stretches across to the right rim, forming a sagging living bridge.",
+      "Q8": "The lead monkey ... steps onto the linked monkeys and runs from left to right over their backs. ... The wolf remains behind",
+      "Q9": "the wolf walks to the left end of the living bridge and steps out onto the linked bodies",
+      "Q10": "The wolf drops between them into the ravine and passes out of view below."
+    }
+  },
+  "storyboard_character_count": 15751,
+  "question_character_count": 1610,
+  "submission_sha256": "f4df24b4fa2a989d59d901cc1649dd9a8076a2312a02d354b80913bd872d452e",
+  "questions_sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+  "evaluator_sha256": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "temperature_difference": "official0 not sent with high reasoning; recorded not equivalent",
+  "score_scale": "0..1"
+}

@@ -1,0 +1,501 @@
+[
+  {
+    "task_id": "video_storyboard_001",
+    "new_score": 1.0,
+    "old_score": 1,
+    "elapsed_minutes": 16.799726768334708,
+    "model": "gpt-6-astra",
+    "effort": "high",
+    "input_unchanged": true,
+    "provider_configuration_verified": true,
+    "timed_out": false,
+    "api_calls": 34,
+    "usage": {
+      "input_tokens": 2629848,
+      "output_tokens": 18801,
+      "total_tokens": 2648649
+    },
+    "submission_files": 1,
+    "result": {
+      "score": 1.0,
+      "correct_count": 10,
+      "total_questions": 10,
+      "answers": {
+        "Q1": "B",
+        "Q2": "A",
+        "Q3": "C",
+        "Q4": "B",
+        "Q5": "A",
+        "Q6": "C",
+        "Q7": "C",
+        "Q8": "C",
+        "Q9": "B",
+        "Q10": "D"
+      },
+      "correct": {
+        "Q1": true,
+        "Q2": true,
+        "Q3": true,
+        "Q4": true,
+        "Q5": true,
+        "Q6": true,
+        "Q7": true,
+        "Q8": true,
+        "Q9": true,
+        "Q10": true
+      },
+      "raw_judge_payload": {
+        "answers": {
+          "Q1": "B",
+          "Q2": "A",
+          "Q3": "C",
+          "Q4": "B",
+          "Q5": "A",
+          "Q6": "C",
+          "Q7": "C",
+          "Q8": "C",
+          "Q9": "B",
+          "Q10": "D"
+        },
+        "evidence": {
+          "Q1": "a village meeting was held that night to discuss measures against the violent wolf",
+          "Q2": "The speaker says he has an idea and asks that everything be left to him.",
+          "Q3": "the bushy-tailed squirrel climbs a fixed vertical wooden ladder",
+          "Q4": "a black, shadow-like silhouette of a long-tailed monkey drops into view",
+          "Q5": "The black wolf walks right on all fours at the foot of a snow-covered, wooded hillside.",
+          "Q6": "two sheer rock cliffs are separated by a deep, open ravine",
+          "Q7": "The joined bodies hang in a shallow curve across the gap, forming a living bridge.",
+          "Q8": "With the wolf still beside the tree on the left ledge, the single monkey gestures, steps onto the linked bodies, and walks right across them.",
+          "Q9": "steps from the rock onto the chain of monkeys, proceeding right in the direction the monkey has just taken",
+          "Q10": "the wolf drops through the open center, limbs spread"
+        }
+      },
+      "storyboard_character_count": 18828,
+      "question_character_count": 1610,
+      "submission_sha256": "83ab2864d8774379fa7af9922ca8650d99489fee5f213ad2d542d987271d39ea",
+      "questions_sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+      "evaluator_sha256": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "temperature_difference": "official0 not sent with high reasoning; recorded not equivalent",
+      "score_scale": "0..1",
+      "elapsed_seconds": 8.93537449836731,
+      "solver_model": "gpt-6-astra",
+      "solver_effort": "high",
+      "scope": "local artifact-score replication; not exact official VM/harness replication"
+    },
+    "quality_review": {
+      "scope": "独立解析冻结DOCX并抽查原片6帧；不是全片逐帧人工标注，也未做Word页面渲染验收。以下检查不改变官方分数。",
+      "findings": [
+        "Sol/high 根据日志回答10个QC问题，10/10正确，官方分数1.0；没有观察到这10项上的判错。",
+        "独立解析确认64个唯一编号段落，时间从00:00连续到11:16.22，均有起止时间和描述；DOCX压缩包及python-docx解析有效。",
+        "抽查原片06:56、07:49、08:29、10:12、10:38、10:45六帧，核对了梯子、兔旁猴影、对话卡、猴桥和桥边动作等画面；抽查不能证明其余叙述全部准确。",
+        "日志主动说明采用连续分段、秒级约略时间；部分段落合并多个镜头，不能把满分解读为逐帧切点或全片镜头边界准确率100%。",
+        "日志的完整性、全部日文翻译、版式与未被10个问题覆盖的叙述没有被官方分数全面检验。",
+        "验证脚本曾因变量名复用出现AttributeError，随后修正并通过；属运行轨迹中的工具错误，不是最终DOCX损坏。",
+        "模型最终回复附带了不适用于本题的AE说明；AE要求仅属于蝴蝶题，本题允许任意DOCX工作流，不据此扣分。",
+        "原默认GPT-5.4补充复核收到HTTP 429，没有产生可用评分；主比较仍为指定的Sol/high。"
+      ],
+      "segments": [
+        {
+          "id": "S01",
+          "start": 0.0,
+          "end": 6.0
+        },
+        {
+          "id": "S02",
+          "start": 6.0,
+          "end": 22.0
+        },
+        {
+          "id": "S03",
+          "start": 22.0,
+          "end": 29.0
+        },
+        {
+          "id": "S04",
+          "start": 29.0,
+          "end": 45.0
+        },
+        {
+          "id": "S05",
+          "start": 45.0,
+          "end": 70.0
+        },
+        {
+          "id": "S06",
+          "start": 70.0,
+          "end": 75.0
+        },
+        {
+          "id": "S07",
+          "start": 75.0,
+          "end": 90.0
+        },
+        {
+          "id": "S08",
+          "start": 90.0,
+          "end": 107.0
+        },
+        {
+          "id": "S09",
+          "start": 107.0,
+          "end": 120.0
+        },
+        {
+          "id": "S10",
+          "start": 120.0,
+          "end": 126.0
+        },
+        {
+          "id": "S11",
+          "start": 126.0,
+          "end": 134.0
+        },
+        {
+          "id": "S12",
+          "start": 134.0,
+          "end": 143.0
+        },
+        {
+          "id": "S13",
+          "start": 143.0,
+          "end": 157.0
+        },
+        {
+          "id": "S14",
+          "start": 157.0,
+          "end": 170.0
+        },
+        {
+          "id": "S15",
+          "start": 170.0,
+          "end": 180.0
+        },
+        {
+          "id": "S16",
+          "start": 180.0,
+          "end": 188.0
+        },
+        {
+          "id": "S17",
+          "start": 188.0,
+          "end": 210.0
+        },
+        {
+          "id": "S18",
+          "start": 210.0,
+          "end": 221.0
+        },
+        {
+          "id": "S19",
+          "start": 221.0,
+          "end": 232.0
+        },
+        {
+          "id": "S20",
+          "start": 232.0,
+          "end": 241.0
+        },
+        {
+          "id": "S21",
+          "start": 241.0,
+          "end": 250.0
+        },
+        {
+          "id": "S22",
+          "start": 250.0,
+          "end": 270.0
+        },
+        {
+          "id": "S23",
+          "start": 270.0,
+          "end": 285.0
+        },
+        {
+          "id": "S24",
+          "start": 285.0,
+          "end": 287.0
+        },
+        {
+          "id": "S25",
+          "start": 287.0,
+          "end": 300.0
+        },
+        {
+          "id": "S26",
+          "start": 300.0,
+          "end": 313.0
+        },
+        {
+          "id": "S27",
+          "start": 313.0,
+          "end": 332.0
+        },
+        {
+          "id": "S28",
+          "start": 332.0,
+          "end": 347.0
+        },
+        {
+          "id": "S29",
+          "start": 347.0,
+          "end": 366.0
+        },
+        {
+          "id": "S30",
+          "start": 366.0,
+          "end": 383.0
+        },
+        {
+          "id": "S31",
+          "start": 383.0,
+          "end": 397.0
+        },
+        {
+          "id": "S32",
+          "start": 397.0,
+          "end": 404.0
+        },
+        {
+          "id": "S33",
+          "start": 404.0,
+          "end": 408.0
+        },
+        {
+          "id": "S34",
+          "start": 408.0,
+          "end": 415.0
+        },
+        {
+          "id": "S35",
+          "start": 415.0,
+          "end": 421.0
+        },
+        {
+          "id": "S36",
+          "start": 421.0,
+          "end": 432.0
+        },
+        {
+          "id": "S37",
+          "start": 432.0,
+          "end": 440.0
+        },
+        {
+          "id": "S38",
+          "start": 440.0,
+          "end": 450.0
+        },
+        {
+          "id": "S39",
+          "start": 450.0,
+          "end": 455.0
+        },
+        {
+          "id": "S40",
+          "start": 455.0,
+          "end": 461.0
+        },
+        {
+          "id": "S41",
+          "start": 461.0,
+          "end": 472.0
+        },
+        {
+          "id": "S42",
+          "start": 472.0,
+          "end": 483.0
+        },
+        {
+          "id": "S43",
+          "start": 483.0,
+          "end": 496.0
+        },
+        {
+          "id": "S44",
+          "start": 496.0,
+          "end": 506.0
+        },
+        {
+          "id": "S45",
+          "start": 506.0,
+          "end": 512.0
+        },
+        {
+          "id": "S46",
+          "start": 512.0,
+          "end": 524.0
+        },
+        {
+          "id": "S47",
+          "start": 524.0,
+          "end": 534.0
+        },
+        {
+          "id": "S48",
+          "start": 534.0,
+          "end": 547.0
+        },
+        {
+          "id": "S49",
+          "start": 547.0,
+          "end": 555.0
+        },
+        {
+          "id": "S50",
+          "start": 555.0,
+          "end": 565.0
+        },
+        {
+          "id": "S51",
+          "start": 565.0,
+          "end": 582.0
+        },
+        {
+          "id": "S52",
+          "start": 582.0,
+          "end": 595.0
+        },
+        {
+          "id": "S53",
+          "start": 595.0,
+          "end": 605.0
+        },
+        {
+          "id": "S54",
+          "start": 605.0,
+          "end": 613.0
+        },
+        {
+          "id": "S55",
+          "start": 613.0,
+          "end": 620.0
+        },
+        {
+          "id": "S56",
+          "start": 620.0,
+          "end": 622.0
+        },
+        {
+          "id": "S57",
+          "start": 622.0,
+          "end": 628.0
+        },
+        {
+          "id": "S58",
+          "start": 628.0,
+          "end": 632.0
+        },
+        {
+          "id": "S59",
+          "start": 632.0,
+          "end": 642.0
+        },
+        {
+          "id": "S60",
+          "start": 642.0,
+          "end": 645.0
+        },
+        {
+          "id": "S61",
+          "start": 645.0,
+          "end": 648.0
+        },
+        {
+          "id": "S62",
+          "start": 648.0,
+          "end": 653.0
+        },
+        {
+          "id": "S63",
+          "start": 653.0,
+          "end": 662.0
+        },
+        {
+          "id": "S64",
+          "start": 662.0,
+          "end": 676.22
+        }
+      ],
+      "preview": "../audit/storyboard_source_spotcheck.jpg"
+    }
+  },
+  {
+    "task_id": "butterfly_flap_animation",
+    "new_score": 1.0,
+    "old_score": 0.974035,
+    "elapsed_minutes": 5.327712126572927,
+    "model": "gpt-6-astra",
+    "effort": "high",
+    "input_unchanged": true,
+    "provider_configuration_verified": true,
+    "timed_out": false,
+    "api_calls": 15,
+    "usage": {
+      "input_tokens": 357268,
+      "output_tokens": 7114,
+      "total_tokens": 364382
+    },
+    "submission_files": 1,
+    "result": {
+      "score": 1.0,
+      "passed": true,
+      "reason": "passed",
+      "hard_gate": null,
+      "probe": {
+        "exists": true,
+        "readable": true,
+        "codec_name": "h264",
+        "container_ext": ".mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "frame_count": 150,
+        "duration_sec": 5.0
+      },
+      "metrics": {
+        "detection_ratio": 1.0,
+        "width_amplitude_ratio": 0.8479638009049772,
+        "estimated_flap_cycles": 4.0,
+        "y_turning_points": 4,
+        "y_range_ratio": 0.20446759259259253,
+        "max_jump_ratio": 0.011976109211270482,
+        "source_shape_iou": 0.6393310954564562
+      },
+      "components": {
+        "timing": 1.0,
+        "detection": 1.0,
+        "wing_flap": 1.0,
+        "path": 1.0,
+        "source_shape": 1.0
+      },
+      "evaluator_sha256": "7895701aba835e2c2edce5190c160103470bf51294dd19d701c5f0255e075c60",
+      "submission_sha256": "ad052dd43fc41d592365757ee28ca22c3e8922732691900bb31c773acf7bc385",
+      "software_compliant": false,
+      "software_note": "User authorized non-AE artifact-score reproduction. No claim of AE compliance.",
+      "elapsed_seconds": 3.618894577026367,
+      "solver_model": "gpt-6-astra",
+      "solver_effort": "high",
+      "scope": "local artifact-score replication; not exact official VM/harness replication"
+    },
+    "quality_review": {
+      "scope": "独立解码150帧、抽查12帧并检查制作脚本；不是盲评美学评分，不改变官方计分。",
+      "findings": [
+        "冻结视频可完整解码：1920×1080、H.264、30 fps、150帧、5秒，黑色背景，所查帧保留原图橙色装饰纹样。",
+        "制作脚本将左翅、右翅、身体分层，绕各自翼根做透视变换；抽帧可见从展开到窄幅合拢再展开，而非负对照中的实心矩形。",
+        "官方检测四次振翅、四个竖直转向点；时长、检测、振翅、路径、源形状五项均满分。",
+        "全部解码帧中没有检测到主体触及画面边界；首末帧差异另存供循环检查。",
+        "这是平面图层的2.5D折叠，翅膀接近合拢时呈细长条；动作是否自然、关节质感及美术质量没有被官方分数直接评价。",
+        "未使用Adobe After Effects，未满足AE软件执行要求；按用户授权复现视频产物分，单独披露，不修改官方分数。",
+        "相比旧Sol的0.974035，本轮1.0的差异全部来自源形状项：旧0.740354升至1.0，其余四项原本均满分。形状IoU从0.516142升至0.639331后得分已饱和，不代表像素级还原100%。",
+        "首次评分记录6505秒墙钟耗时，超过30分钟，已保存为result_over_budget.json。对同一冻结视频重新限时核分，总耗时4.42秒仍为1.0；没有重新答题、修改视频或反馈分数。异常的具体时钟/宿主原因未确定。",
+        "同规格实心矩形负对照也得0.912812，因此该评分器对非蝴蝶伪解缺少强约束；新答卷本身可见蝴蝶纹样，但满分不能解决评分器的这一缺陷。"
+      ],
+      "preview": "../audit/butterfly_output_spotcheck.jpg",
+      "decoded_frames": 150,
+      "touches_frame_edge": false,
+      "first_last_mean_absolute_pixel_difference": 0.21231368955761318
+    }
+  }
+]

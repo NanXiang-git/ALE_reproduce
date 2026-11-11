@@ -1,0 +1,3 @@
+Created [storyboard.docx](/workspace/submission/storyboard.docx) with 64 timed segments covering the full film. DOCX validity and timeline continuity checks passed.
+
+Produced using python-docx. After Effects was not used; the AE software requirement is unmet.

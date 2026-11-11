@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/video_storyboard_qa_set.docx",
+    "bytes": 31105,
+    "sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d"
+  },
+  {
+    "path": "input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv",
+    "bytes": 43694574,
+    "sha256": "420869f68228ae6406627c7edf0f3c44984fb4530f0859cda5928c5ad139079e"
+  },
+  {
+    "path": "software/launch_word_processor.cmd",
+    "bytes": 230,
+    "sha256": "cf12005c400765e353ab3f8fd56cc2199d3f8e4e39dc1e7427a17f3ee3092fe2"
+  },
+  {
+    "path": "TASK.md",
+    "bytes": 2047,
+    "sha256": "b472efe07b0029e887bb72889fdc7329d5f85868cb2e25e1a554d70da5c0392d"
+  }
+]

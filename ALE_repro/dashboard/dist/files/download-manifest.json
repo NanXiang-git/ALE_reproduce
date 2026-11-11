@@ -1,0 +1,56 @@
+[
+  {
+    "path": "D:\\omniALE\\ALE\u590d\u73b0\\sources\\task-data\\tasks\\visual_media\\video_storyboard_001\\base\\input\\Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv",
+    "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam-data/resolve/e9a2674a62f7d8069f136e642c10e8d8e9979dbf/tasks/visual_media/video_storyboard_001/base/input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv?download=true",
+    "bytes": 43694574,
+    "sha256": "420869f68228ae6406627c7edf0f3c44984fb4530f0859cda5928c5ad139079e",
+    "expected_sha256": "420869f68228ae6406627c7edf0f3c44984fb4530f0859cda5928c5ad139079e",
+    "git_blob_sha1": "be105c2fb049a7674ed1c565c0257a0c0c99d428",
+    "verified": true
+  },
+  {
+    "path": "D:\\omniALE\\ALE\u590d\u73b0\\sources\\task-data\\tasks\\visual_media\\video_storyboard_001\\base\\input\\video_storyboard_qa_set.docx",
+    "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam-data/resolve/e9a2674a62f7d8069f136e642c10e8d8e9979dbf/tasks/visual_media/video_storyboard_001/base/input/video_storyboard_qa_set.docx?download=true",
+    "bytes": 31105,
+    "sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+    "expected_sha256": "1503c495a270b2e000e341c07ec5113760b24a0461c9c2d7b1a38e97e8d1537d",
+    "git_blob_sha1": "4105f21b226cfdd08eef3e8c53043bc667f75ce2",
+    "verified": true
+  },
+  {
+    "path": "D:\\omniALE\\ALE\u590d\u73b0\\sources\\task-data\\tasks\\visual_media\\video_storyboard_001\\base\\software\\launch_word_processor.cmd",
+    "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam-data/resolve/e9a2674a62f7d8069f136e642c10e8d8e9979dbf/tasks/visual_media/video_storyboard_001/base/software/launch_word_processor.cmd?download=true",
+    "bytes": 230,
+    "sha256": "cf12005c400765e353ab3f8fd56cc2199d3f8e4e39dc1e7427a17f3ee3092fe2",
+    "expected_sha256": null,
+    "git_blob_sha1": "f42e7a6189227a184f3e80fa5d1bea3fa776ac47",
+    "verified": true
+  },
+  {
+    "path": "D:\\omniALE\\ALE\u590d\u73b0\\sources\\task-data\\tasks\\visual_media\\butterfly_flap_animation\\base\\input\\butterfly.jpeg",
+    "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam-data/resolve/e9a2674a62f7d8069f136e642c10e8d8e9979dbf/tasks/visual_media/butterfly_flap_animation/base/input/butterfly.jpeg?download=true",
+    "bytes": 121169,
+    "sha256": "fa21d6b290b9d865cb44ccabf0b090e7b05903994259d5aaaf3ba7cb7e8fcdbf",
+    "expected_sha256": "fa21d6b290b9d865cb44ccabf0b090e7b05903994259d5aaaf3ba7cb7e8fcdbf",
+    "git_blob_sha1": "6e13d5a69dd139e29b4181764e0bd14045020270",
+    "verified": true
+  },
+  {
+    "path": "D:\\omniALE\\ALE\u590d\u73b0\\sources\\task-data\\tasks\\visual_media\\butterfly_flap_animation\\base\\input\\task_spec.md",
+    "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam-data/resolve/e9a2674a62f7d8069f136e642c10e8d8e9979dbf/tasks/visual_media/butterfly_flap_animation/base/input/task_spec.md?download=true",
+    "bytes": 1385,
+    "sha256": "c68bd57e8982cdf8faa1c074c10fe1a341e47a9315b96bfd9a960c36de709bca",
+    "expected_sha256": null,
+    "git_blob_sha1": "5a0d383c7083846337dd000f5a59ba4f1d5e412f",
+    "verified": true
+  },
+  {
+    "path": "D:\\omniALE\\ALE\u590d\u73b0\\sources\\task-data\\tasks\\visual_media\\butterfly_flap_animation\\base\\software\\launch_after_effects.bat",
+    "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam-data/resolve/e9a2674a62f7d8069f136e642c10e8d8e9979dbf/tasks/visual_media/butterfly_flap_animation/base/software/launch_after_effects.bat?download=true",
+    "bytes": 452,
+    "sha256": "a4b7ae915c4c630390dc7f28dc3a497e13f2298a79425d968e800520ec50c4da",
+    "expected_sha256": null,
+    "git_blob_sha1": "5e2ea67a3fd4494f2b1063c3bfa4d40f79a17435",
+    "verified": true
+  }
+]

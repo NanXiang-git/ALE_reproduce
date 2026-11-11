@@ -1,0 +1,18 @@
+{
+  "submission_hashes_verified": true,
+  "results": [
+    {
+      "task_id": "video_storyboard_001",
+      "input_unchanged": true,
+      "provider_configuration_verified": true,
+      "new_score": 1.0
+    },
+    {
+      "task_id": "butterfly_flap_animation",
+      "input_unchanged": true,
+      "provider_configuration_verified": true,
+      "new_score": 1.0
+    }
+  ],
+  "dashboard_external_dependencies": false
+}

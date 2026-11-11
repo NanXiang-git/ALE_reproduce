@@ -1,0 +1,30 @@
+{
+  "case": "video_storyboard_001",
+  "source_case": "video_storyboard_001",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1794328975.206548,
+  "host_end_unix": 1794329983.2263744,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "video_storyboard_001",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1794329983.1816883,
+    "elapsed_seconds": 1007.9836061000824
+  },
+  "input_unchanged": true,
+  "provider_configuration_verified": true,
+  "submission_manifest": [
+    {
+      "path": "storyboard.docx",
+      "bytes": 47682,
+      "sha256": "83ab2864d8774379fa7af9922ca8650d99489fee5f213ad2d542d987271d39ea"
+    }
+  ],
+  "submission_manifest_sha256": "908f6164b2653ec6af0083d49abce1e36f7db103588ef29ea0c4f7ac8e3bb1c4",
+  "elapsed_solver_environment_seconds": 1007.9836061000824,
+  "timed_out": false
+}

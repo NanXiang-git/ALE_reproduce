@@ -1,0 +1,45 @@
+{
+  "task_id": "visual_media/butterfly_flap_animation",
+  "score": 0.974035,
+  "status": "graded",
+  "utc": "2026-11-10T09:30:34.716468+00:00",
+  "solver_run_status": "completed",
+  "solver_input_unchanged": true,
+  "artifact_from_interrupted_attempt": false,
+  "details": {
+    "score": 0.974035,
+    "passed": true,
+    "reason": "passed",
+    "hard_gate": null,
+    "probe": {
+      "exists": true,
+      "readable": true,
+      "codec_name": "h264",
+      "container_ext": ".mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "frame_count": 144,
+      "duration_sec": 4.8
+    },
+    "metrics": {
+      "detection_ratio": 1.0,
+      "width_amplitude_ratio": 0.8702952029520296,
+      "estimated_flap_cycles": 4.0,
+      "y_turning_points": 4,
+      "y_range_ratio": 0.26923611111111106,
+      "max_jump_ratio": 0.014441741951380956,
+      "source_shape_iou": 0.5161417894394866
+    },
+    "components": {
+      "timing": 1.0,
+      "detection": 1.0,
+      "wing_flap": 1.0,
+      "path": 1.0,
+      "source_shape": 0.7403544735987166
+    }
+  },
+  "evaluator_file_sha256": "7895701aba835e2c2edce5190c160103470bf51294dd19d701c5f0255e075c60",
+  "submission_sha256": "f13a6969ae9717dfa9600d9c8c4844eea9a1436e39b3329e6fe6e526b765bbfb",
+  "evaluation_elapsed_s": 4.783
+}

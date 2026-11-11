@@ -1,0 +1,22 @@
+[
+  {
+    "path": "tasks/visual_media/video_storyboard_001/main.py",
+    "sha256": "1eab24298fc48edd1ca20ff21439d497fcd26fec99f5180b543dc60a67a8aa12",
+    "matches_archive": true
+  },
+  {
+    "path": "tasks/visual_media/video_storyboard_001/scripts/evaluate_storyboard.py",
+    "sha256": "ffc7737cf8c335afae7ecdf12a483e54851ddc73fd5de00c6e38b366b9bfdda8",
+    "matches_archive": true
+  },
+  {
+    "path": "tasks/visual_media/butterfly_flap_animation/main.py",
+    "sha256": "92b47471881ed96958f7cf2077af2fc486dd8138c4dff933b8f0514c4db6d393",
+    "matches_archive": true
+  },
+  {
+    "path": "tasks/visual_media/butterfly_flap_animation/scripts/score_outputs.py",
+    "sha256": "7895701aba835e2c2edce5190c160103470bf51294dd19d701c5f0255e075c60",
+    "matches_archive": true
+  }
+]

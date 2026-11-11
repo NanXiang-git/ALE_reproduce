@@ -1,0 +1,257 @@
+{
+  "scope": "Two valid attempt_002 solver runs and the final judge run. Preparation/preflight activity is separate.",
+  "model_service_online": true,
+  "model_service": "OpenAI / ChatGPT subscription",
+  "shell_network_policy": false,
+  "cases": [
+    {
+      "task_id": "visual_media/video_storyboard_001",
+      "history_complete": true,
+      "history_item_type_counts": {
+        "userMessage": 1,
+        "agentMessage": 5,
+        "commandExecution": 15,
+        "reasoning": 18,
+        "imageView": 32,
+        "fileChange": 1
+      },
+      "command_count": 15,
+      "image_view_count": 32,
+      "all_viewed_images_within_own_task": true,
+      "external_tool_calls": [],
+      "suspicious_command_matches": [],
+      "generated_scripts": [
+        {
+          "path": "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\build_doc.py",
+          "sha256": "c4b717a9f00ef15615abf37e87d781cfe2f8419f42b94ba17fa88a729438395e",
+          "imports": [
+            "html",
+            "json",
+            "pathlib",
+            "xml.etree.ElementTree",
+            "zipfile"
+          ],
+          "network_imports": [],
+          "io_or_dynamic_calls": []
+        },
+        {
+          "path": "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\content.py",
+          "sha256": "d438371ed97c04b8bdb3a36917d7b301f533c9455d95a676648c8153db75ed3f",
+          "imports": [
+            "json",
+            "pathlib"
+          ],
+          "network_imports": [],
+          "io_or_dynamic_calls": []
+        },
+        {
+          "path": "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\dense.py",
+          "sha256": "8bb93714e5fbe0f3b84143a7fdb5f6033a2b53021fffc33c38494f4d00b44d69",
+          "imports": [
+            "PIL",
+            "pathlib"
+          ],
+          "network_imports": [],
+          "io_or_dynamic_calls": []
+        },
+        {
+          "path": "D:\\omniALE\\ALE_repro\\runs\\video_storyboard_001\\attempt_002\\work\\sheets.py",
+          "sha256": "89f0a8d5e9606c2a73db31bf621751dded5815eab641097e763b16f341acd415",
+          "imports": [
+            "PIL",
+            "pathlib"
+          ],
+          "network_imports": [],
+          "io_or_dynamic_calls": []
+        }
+      ],
+      "network_import_count": 0,
+      "input_hashes_unchanged": true
+    },
+    {
+      "task_id": "visual_media/butterfly_flap_animation",
+      "history_complete": true,
+      "history_item_type_counts": {
+        "userMessage": 1,
+        "agentMessage": 4,
+        "commandExecution": 9,
+        "imageView": 7,
+        "reasoning": 9
+      },
+      "command_count": 9,
+      "image_view_count": 7,
+      "all_viewed_images_within_own_task": true,
+      "external_tool_calls": [],
+      "suspicious_command_matches": [],
+      "generated_scripts": [
+        {
+          "path": "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\render.py",
+          "sha256": "88823824d1105fdd46698663524b84a7df2782fc4b9ca259d74655488b482471",
+          "imports": [
+            "PIL",
+            "cv2",
+            "math",
+            "numpy",
+            "pathlib",
+            "subprocess"
+          ],
+          "network_imports": [],
+          "io_or_dynamic_calls": [
+            "subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=log)"
+          ]
+        },
+        {
+          "path": "D:\\omniALE\\ALE_repro\\runs\\butterfly_flap_animation\\attempt_002\\work\\verify.py",
+          "sha256": "fcb80e5e9fc0d03d475c80588e4ad3eb086d40175549f039ff857e93dd85030c",
+          "imports": [
+            "PIL",
+            "cv2",
+            "numpy",
+            "pathlib"
+          ],
+          "network_imports": [],
+          "io_or_dynamic_calls": []
+        }
+      ],
+      "network_import_count": 0,
+      "input_hashes_unchanged": true
+    }
+  ],
+  "judge": {
+    "item_type_counts": {
+      "userMessage": 1,
+      "reasoning": 1,
+      "agentMessage": 1
+    },
+    "tools": 0
+  },
+  "conclusion": "No web-search/browser/MCP retrieval, network-request code, or reference/evaluator-file access was found in the retrieved complete action histories and reviewed generated scripts.",
+  "limits": [
+    "No packet capture or OS-wide process/network trace was collected; configured sandbox policy and application logs are not proof of physical air-gapping.",
+    "The host was not an isolated official VM. The orchestrator could access official grading code; only prompts/inputs were staged for the solvers.",
+    "Public benchmark/media may occur in model pretraining; this audit cannot rule out memorized knowledge.",
+    "High scores reflect this grader: storyboard is ten factual questions, and butterfly is mostly deterministic motion/format criteria. They do not certify every aspect of professional output quality."
+  ],
+  "invalid_attempts": [
+    {
+      "task_id": "visual_media/video_storyboard_001",
+      "attempt": "attempt_001",
+      "scored": false,
+      "item_type_counts": {
+        "userMessage": 1,
+        "agentMessage": 2,
+        "reasoning": 3,
+        "mcpToolCall": 1
+      },
+      "mcp_calls": [
+        {
+          "type": "mcpToolCall",
+          "id": "exec-e8e97f6c-ec99-4f68-8179-ab791453cf69",
+          "server": "codex_apps",
+          "tool": "codex_document_control.list_document_sessions",
+          "status": "completed",
+          "arguments": {},
+          "appContext": {
+            "connectorId": "connector_openai_codex_document_control",
+            "linkId": "implicit_link::connector_openai_codex_document_control",
+            "resourceUri": null,
+            "appName": "Codex Document Control",
+            "actionName": "list_document_sessions"
+          },
+          "mcpAppUi": null,
+          "pluginId": null,
+          "readOnlyHint": true,
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "Action completed."
+              }
+            ],
+            "structuredContent": {
+              "meta": null,
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No connected Codex document sessions were found.",
+                  "annotations": null,
+                  "meta": null
+                }
+              ],
+              "structuredContent": {
+                "executors": []
+              },
+              "isError": false
+            },
+            "_meta": null
+          },
+          "error": null,
+          "durationMs": 1790,
+          "startedAtMs": 1794299497204,
+          "completedAtMs": 1794299498996
+        }
+      ],
+      "result": "No connected Codex document sessions were found."
+    },
+    {
+      "task_id": "visual_media/butterfly_flap_animation",
+      "attempt": "attempt_001",
+      "scored": false,
+      "item_type_counts": {
+        "userMessage": 1,
+        "agentMessage": 2,
+        "reasoning": 4,
+        "mcpToolCall": 1
+      },
+      "mcp_calls": [
+        {
+          "type": "mcpToolCall",
+          "id": "exec-fc3d0035-dd7b-4d1e-b7fb-a170572bb44a",
+          "server": "codex_apps",
+          "tool": "codex_document_control.list_document_sessions",
+          "status": "completed",
+          "arguments": {},
+          "appContext": {
+            "connectorId": "connector_openai_codex_document_control",
+            "linkId": "implicit_link::connector_openai_codex_document_control",
+            "resourceUri": null,
+            "appName": "Codex Document Control",
+            "actionName": "list_document_sessions"
+          },
+          "mcpAppUi": null,
+          "pluginId": null,
+          "readOnlyHint": true,
+          "result": {
+            "content": [
+              {
+                "type": "text",
+                "text": "Action completed."
+              }
+            ],
+            "structuredContent": {
+              "meta": null,
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No connected Codex document sessions were found.",
+                  "annotations": null,
+                  "meta": null
+                }
+              ],
+              "structuredContent": {
+                "executors": []
+              },
+              "isError": false
+            },
+            "_meta": null
+          },
+          "error": null,
+          "durationMs": 2321,
+          "startedAtMs": 1794299664556,
+          "completedAtMs": 1794299666884
+        }
+      ],
+      "result": "No connected Codex document sessions were found."
+    }
+  ]
+}
