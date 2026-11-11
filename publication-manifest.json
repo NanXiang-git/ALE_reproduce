@@ -16,11 +16,6 @@
       "sha256": "b4d4a1273ae6a453bc9e41002dc63b3474b4da8cf63bcb07ff01c3e2a3603ee9"
     },
     {
-      "path": "publication-manifest.json",
-      "bytes": 41120,
-      "sha256": "da0388adc6a375568adca5b8aed72f2704910810f7428ca6fa3a3341a63ba1ef"
-    },
-    {
       "path": "README.md",
       "bytes": 2395,
       "sha256": "764ccc5d0448d7ce904b36176f26b208b6df8dd1b442a91c4a2a14a4a223b843"
@@ -1003,5 +998,5 @@
   ],
   "checked_links": 26,
   "credentials_pattern_scan": "passed",
-  "bytes": 42660614
+  "bytes": 42619494
 }
