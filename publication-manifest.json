@@ -12,13 +12,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 360,
-      "sha256": "b4d4a1273ae6a453bc9e41002dc63b3474b4da8cf63bcb07ff01c3e2a3603ee9"
+      "bytes": 340,
+      "sha256": "27372ee08414f2741d2129ef32f2a958e4dc6333becafcc341f89ff8051d6bac"
     },
     {
       "path": "README.md",
-      "bytes": 2395,
-      "sha256": "764ccc5d0448d7ce904b36176f26b208b6df8dd1b442a91c4a2a14a4a223b843"
+      "bytes": 2535,
+      "sha256": "f5c4f3ebfd56f995197691c812a1619eff8bce0a2f8d219164cf8f1c55ba7816"
     },
     {
       "path": "official_source/LICENSE",
@@ -57,13 +57,13 @@
     },
     {
       "path": "ALE_repro/dashboard/dist/dashboard-data.json",
-      "bytes": 274573,
-      "sha256": "d32ab9eeaf29c88e7a52671f863bb7870d4d2e58309d73c0b6cc032142625694"
+      "bytes": 500193,
+      "sha256": "89bcc131e668df91b534742590b5f3e119f3fc7a3ba97b3d91818c5a701a0d03"
     },
     {
       "path": "ALE_repro/dashboard/dist/index.html",
-      "bytes": 283272,
-      "sha256": "48fc95bf17c6cbed5d3701beee24117f68a79665c9a95bc30754017bb8e60d7a"
+      "bytes": 508655,
+      "sha256": "28c3b5b81a18cce4b373747b6c35185e03094df956069873c3cd91b2e7aae757"
     },
     {
       "path": "ALE_repro/dashboard/dist/assets/butterfly-contact.jpg",
@@ -486,6 +486,11 @@
       "sha256": "4e9c8ef9eb3e73e67e8c0e2b6cae9e3b2d5ffb9f8b29022bb90cce442945b221"
     },
     {
+      "path": "ALE_astra_audit_20261111/dashboard/audit-detail.html",
+      "bytes": 29766,
+      "sha256": "987607e57ce050590e3cf3f2e09d2c6b802fcbdeb9f72bddef095e2340cd0cdb"
+    },
+    {
       "path": "ALE_astra_audit_20261111/dashboard/butterfly_flap_animation_trajectory.html",
       "bytes": 28626,
       "sha256": "9e8f9aebdc17e059441991fed7d93fbd1e398cff4574aebdf777e07510bb8f32"
@@ -497,8 +502,8 @@
     },
     {
       "path": "ALE_astra_audit_20261111/dashboard/index.html",
-      "bytes": 29766,
-      "sha256": "987607e57ce050590e3cf3f2e09d2c6b802fcbdeb9f72bddef095e2340cd0cdb"
+      "bytes": 302,
+      "sha256": "58ee4c3cecce8d8b5576346ee6c7eb13765acfb3565523a5ab607f61bf702613"
     },
     {
       "path": "ALE_astra_audit_20261111/dashboard/storyboard_text.txt",
@@ -559,6 +564,11 @@
       "path": "ALE_astra_audit_20261111/reports/comparison.json",
       "bytes": 14825,
       "sha256": "1b4d3d10b1ec7bbd4542c68dce311904ca76bbeabbb825cad3ece1b547057e02"
+    },
+    {
+      "path": "ALE_astra_audit_20261111/reports/final_dashboard_qa.json",
+      "bytes": 14692,
+      "sha256": "090f423504cfcb21f162b3ad99350b42add30f4c48016f9636f142d897c583b9"
     },
     {
       "path": "ALE_astra_audit_20261111/reports/final_integrity.json",
@@ -996,7 +1006,7 @@
       "sha256": "02fd43b2a22f63ec5893fcffb6c38444f91081c056a53defbdbedaca6852c70b"
     }
   ],
-  "checked_links": 26,
+  "bytes": 43085611,
   "credentials_pattern_scan": "passed",
-  "bytes": 42619494
+  "dashboard_qa": "ALE_astra_audit_20261111/reports/final_dashboard_qa.json"
 }

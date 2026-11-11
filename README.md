@@ -1,11 +1,13 @@
 # ALE 两题复现与评分审计
 
-**[打开在线结果看板](https://nanxiang-git.github.io/ALE_reproduce/)** · [原 Sol 看板](https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/index.html)
+**[打开在线结果看板](https://nanxiang-git.github.io/ALE_reproduce/)** · [Sol / Astra 完整看板](https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/index.html)
 
 | 任务 | 旧 GPT-6.1 Sol/high | 本轮 GPT-6 Astra/high |
 | --- | ---: | ---: |
 | 11 分钟动画镜头日志 | 100 | 100 |
 | 蝴蝶振翅动画 | 97.4035 | 100 |
+
+最终看板沿用旧 Sol 页面设计，支持 Sol / Astra 切换，分数、产物、轨迹和评分详情随模型切换。
 
 本轮使用 API + Codex，在独立离线工具环境内串行答题；仅受控模型代理可连接推理API。真值、评分器和旧答案未挂载给答题模型。镜头日志主裁判为 GPT-6.1 Sol/high；蝴蝶沿用官方确定性评分器。
 

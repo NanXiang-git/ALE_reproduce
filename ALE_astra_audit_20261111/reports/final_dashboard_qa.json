@@ -1,0 +1,252 @@
+{
+  "passed": true,
+  "views": [
+    {
+      "model": "astra",
+      "case": 0,
+      "tab": "prompt",
+      "bytes": 6293
+    },
+    {
+      "model": "astra",
+      "case": 0,
+      "tab": "result",
+      "bytes": 50728
+    },
+    {
+      "model": "astra",
+      "case": 0,
+      "tab": "trace",
+      "bytes": 1298
+    },
+    {
+      "model": "astra",
+      "case": 0,
+      "tab": "grade",
+      "bytes": 34963
+    },
+    {
+      "model": "astra",
+      "case": 0,
+      "tab": "analysis",
+      "bytes": 1864
+    },
+    {
+      "model": "astra",
+      "case": 0,
+      "tab": "audit",
+      "bytes": 2385
+    },
+    {
+      "model": "astra",
+      "case": 1,
+      "tab": "prompt",
+      "bytes": 5296
+    },
+    {
+      "model": "astra",
+      "case": 1,
+      "tab": "result",
+      "bytes": 8513
+    },
+    {
+      "model": "astra",
+      "case": 1,
+      "tab": "trace",
+      "bytes": 1313
+    },
+    {
+      "model": "astra",
+      "case": 1,
+      "tab": "grade",
+      "bytes": 4947
+    },
+    {
+      "model": "astra",
+      "case": 1,
+      "tab": "analysis",
+      "bytes": 1972
+    },
+    {
+      "model": "astra",
+      "case": 1,
+      "tab": "audit",
+      "bytes": 2385
+    },
+    {
+      "model": "sol",
+      "case": 0,
+      "tab": "prompt",
+      "bytes": 6299
+    },
+    {
+      "model": "sol",
+      "case": 0,
+      "tab": "result",
+      "bytes": 45690
+    },
+    {
+      "model": "sol",
+      "case": 0,
+      "tab": "trace",
+      "bytes": 3607
+    },
+    {
+      "model": "sol",
+      "case": 0,
+      "tab": "grade",
+      "bytes": 31210
+    },
+    {
+      "model": "sol",
+      "case": 0,
+      "tab": "analysis",
+      "bytes": 1483
+    },
+    {
+      "model": "sol",
+      "case": 0,
+      "tab": "audit",
+      "bytes": 2385
+    },
+    {
+      "model": "sol",
+      "case": 1,
+      "tab": "prompt",
+      "bytes": 5370
+    },
+    {
+      "model": "sol",
+      "case": 1,
+      "tab": "result",
+      "bytes": 7269
+    },
+    {
+      "model": "sol",
+      "case": 1,
+      "tab": "trace",
+      "bytes": 3036
+    },
+    {
+      "model": "sol",
+      "case": 1,
+      "tab": "grade",
+      "bytes": 4550
+    },
+    {
+      "model": "sol",
+      "case": 1,
+      "tab": "analysis",
+      "bytes": 1537
+    },
+    {
+      "model": "sol",
+      "case": 1,
+      "tab": "audit",
+      "bytes": 2385
+    }
+  ],
+  "links": [
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/candidate/video_storyboard_001/TASK.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/reproduction_code/environment/runtime/prompt.txt",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_qa_set.docx",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/source-film.mp4",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/environment/experiment.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/reports/RESULTS.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/sealed/video_storyboard_001/submission/storyboard.docx",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/authoring/video_storyboard_001/build_log.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/authoring/video_storyboard_001/contact.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/authoring/video_storyboard_001/detail.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/dashboard/video_storyboard_001_trajectory.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/orchestrator/video_storyboard_001/events.jsonl",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/orchestrator/video_storyboard_001/api.jsonl",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/sealed/video_storyboard_001/freeze.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/evaluation/video_storyboard_001/result.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/official-evaluator.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/evaluation/video_storyboard_001/judge/request.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/evaluation/video_storyboard_001/judge/response.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/negative_controls/pulsing_rectangle_1080p.mp4",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/negative_controls/pulsing_rectangle_1080p.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/audit_checks.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/AUDIT.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/environment/acceptance.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/reports/verification.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/new_action_access_review.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/%E8%81%94%E7%BD%91%E4%B8%8E%E7%AD%94%E6%A1%88%E8%AE%BF%E9%97%AE%E5%AE%A1%E8%AE%A1.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/history_recheck.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/candidate/butterfly_flap_animation/TASK.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/butterfly.jpeg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/sealed/butterfly_flap_animation/submission/output.mp4",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/audit/butterfly_output_spotcheck.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/authoring/butterfly_flap_animation/render_butterfly.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/dashboard/butterfly_flap_animation_trajectory.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/orchestrator/butterfly_flap_animation/events.jsonl",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/orchestrator/butterfly_flap_animation/api.jsonl",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/sealed/butterfly_flap_animation/freeze.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/evaluation/butterfly_flap_animation/result.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/official-evaluator.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_astra_audit_20261111/evaluation/butterfly_flap_animation/recheck_provenance.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/prompt.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/experiment.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/storyboard.docx",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/build_doc.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/content.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/dense.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/sheets.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001-actions.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/cli-events.jsonl",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/run.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_00.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_01.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_02.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_03.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_04.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_05.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_06.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/sheet_07.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_00.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_01.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_02.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_03.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_04.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_05.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_06.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_07.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_08.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_09.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_10.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_11.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_12.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_13.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_14.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_15.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_16.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_17.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_18.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_19.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_20.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/dense_21.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/detail.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/video_storyboard_001/cards.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/video_storyboard_001/score.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/judge-prompt.txt",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/judge-response.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/prompt.md",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/butterfly-output.mp4",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/butterfly-contact.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/render.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/verify.py",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation-actions.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/cli-events.jsonl",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/run.json",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/butterfly_flap_animation/butterfly.jpeg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/butterfly_flap_animation/preview_000.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/butterfly_flap_animation/preview_018.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/butterfly_flap_animation/preview_036.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/butterfly_flap_animation/preview_072.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/assets/observations/butterfly_flap_animation/contact_sheet.jpg",
+    "https://nanxiang-git.github.io/ALE_reproduce/ALE_repro/dashboard/dist/files/butterfly_flap_animation/score.json"
+  ],
+  "visual_browser_check": false,
+  "visual_browser_check_reason": "Computer Use could not reliably determine the Windows browser URL; no UI actions performed."
+}
